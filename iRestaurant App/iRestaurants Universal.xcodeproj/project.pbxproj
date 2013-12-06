@@ -1,0 +1,940 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6833BA1916AF20F60001AC1A /* closex.png in Resources */ = {isa = PBXBuildFile; fileRef = 6833BA1816AF20F60001AC1A /* closex.png */; };
+		DF034A4616D766F200BC5C44 /* graphnavimage.png in Resources */ = {isa = PBXBuildFile; fileRef = DF034A4516D766F200BC5C44 /* graphnavimage.png */; };
+		DF034A4916D76B8700BC5C44 /* backbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = DF034A4816D76B8700BC5C44 /* backbtn.png */; };
+		DF123B9A16D2747100E6D658 /* back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DF123B9916D2747100E6D658 /* back-button.png */; };
+		DF16411016C38A8A00C7B08D /* printalldetail.png in Resources */ = {isa = PBXBuildFile; fileRef = DF16410F16C38A8A00C7B08D /* printalldetail.png */; };
+		DF1C9FB716CF5EB300249052 /* iRestaurantsGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1C9FB616CF5EB300249052 /* iRestaurantsGraphViewController.m */; };
+		DF1C9FBD16CF5FF300249052 /* bar_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = DF1C9FB916CF5FF300249052 /* bar_orange.png */; };
+		DF1C9FBE16CF5FF300249052 /* bar_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = DF1C9FBA16CF5FF300249052 /* bar_purple.png */; };
+		DF1C9FBF16CF5FF300249052 /* bar_selector_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = DF1C9FBB16CF5FF300249052 /* bar_selector_orange.png */; };
+		DF1C9FC016CF5FF300249052 /* bar_selector_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = DF1C9FBC16CF5FF300249052 /* bar_selector_purple.png */; };
+		DF1C9FC216CF678D00249052 /* graphsmallbg.png in Resources */ = {isa = PBXBuildFile; fileRef = DF1C9FC116CF678D00249052 /* graphsmallbg.png */; };
+		DF1DD6AF16B93A9500C7085B /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = DF1DD6AE16B93A9500C7085B /* plus.png */; };
+		DF1DD6B116B93BA600C7085B /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = DF1DD6B016B93BA600C7085B /* minus.png */; };
+		DF20077416C62BB100D94695 /* poup996x909.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20077316C62BB100D94695 /* poup996x909.png */; };
+		DF20077716C6305A00D94695 /* cc-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20077616C6305A00D94695 /* cc-button.png */; };
+		DF20077916C6306200D94695 /* cash-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20077816C6306200D94695 /* cash-button.png */; };
+		DF20077B16C63B2400D94695 /* reciept-no-field.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20077A16C63B2400D94695 /* reciept-no-field.png */; };
+		DF20077D16C646E100D94695 /* submit-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20077C16C646E100D94695 /* submit-button.png */; };
+		DF20077F16C648F800D94695 /* text-field.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20077E16C648F800D94695 /* text-field.png */; };
+		DF20A8CB16A95B8500FDE326 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20A8C816A95B8500FDE326 /* cancel.png */; };
+		DF20A8CC16A95B8500FDE326 /* clear-table.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20A8C916A95B8500FDE326 /* clear-table.png */; };
+		DF20A8CD16A95B8500FDE326 /* update-order.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20A8CA16A95B8500FDE326 /* update-order.png */; };
+		DF20A8D016A97A3300FDE326 /* update.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20A8CF16A97A3300FDE326 /* update.png */; };
+		DF23E2EB169D4E45005A8876 /* GetiRestaurantsAllorder.m in Sources */ = {isa = PBXBuildFile; fileRef = DF23E2EA169D4E45005A8876 /* GetiRestaurantsAllorder.m */; };
+		DF2B6E7E16DF515D00C0C80E /* order-row.png in Resources */ = {isa = PBXBuildFile; fileRef = DF2B6E7D16DF515D00C0C80E /* order-row.png */; };
+		DF2B6E8016DF6CF800C0C80E /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = DF2B6E7F16DF6CF800C0C80E /* Default-Landscape.png */; };
+		DF2B6E8216DF7B3600C0C80E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DF2B6E8116DF7B3600C0C80E /* icon.png */; };
+		DF2CF5F1168828CF00D87763 /* itheamthumb.png in Resources */ = {isa = PBXBuildFile; fileRef = DF2CF5F0168828CF00D87763 /* itheamthumb.png */; };
+		DF2CF5F416882FE900D87763 /* total-price-head.png in Resources */ = {isa = PBXBuildFile; fileRef = DF2CF5F316882FE900D87763 /* total-price-head.png */; };
+		DF2CF5F61688391700D87763 /* price-tag.png in Resources */ = {isa = PBXBuildFile; fileRef = DF2CF5F51688391700D87763 /* price-tag.png */; };
+		DF2F2D5A167B4CE200800097 /* bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = DF2F2D56167B4CE200800097 /* bottom.png */; };
+		DF2F2D5B167B4CE200800097 /* category-heading.png in Resources */ = {isa = PBXBuildFile; fileRef = DF2F2D57167B4CE200800097 /* category-heading.png */; };
+		DF2F2D5C167B4CE200800097 /* item-heading.png in Resources */ = {isa = PBXBuildFile; fileRef = DF2F2D58167B4CE200800097 /* item-heading.png */; };
+		DF2F2D5D167B4CE200800097 /* items-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DF2F2D59167B4CE200800097 /* items-bg.png */; };
+		DF32A51D168081970055242A /* list-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DF32A51C168081970055242A /* list-icon.png */; };
+		DF32A520168081AF0055242A /* setting-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DF32A51F168081AF0055242A /* setting-icon.png */; };
+		DF32A522168083200055242A /* all-orders.png in Resources */ = {isa = PBXBuildFile; fileRef = DF32A521168083200055242A /* all-orders.png */; };
+		DF35CCB6168C440B00F926E2 /* allordertable-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DF35CCB5168C440B00F926E2 /* allordertable-bg.png */; };
+		DF35CCB9168C450C00F926E2 /* heading-top.png in Resources */ = {isa = PBXBuildFile; fileRef = DF35CCB8168C450C00F926E2 /* heading-top.png */; };
+		DF3B43C51685A9F300FD39E5 /* submit-order.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3B43C41685A9F300FD39E5 /* submit-order.png */; };
+		DF3B43C81685AB7E00FD39E5 /* product-row.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3B43C71685AB7E00FD39E5 /* product-row.png */; };
+		DF4DAEC8168AED2B001010EC /* clear-table-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4DAEC7168AED2B001010EC /* clear-table-button.png */; };
+		DF4DAECB168AEEC6001010EC /* discount-table.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4DAECA168AEEC6001010EC /* discount-table.png */; };
+		DF4DAED6168AFB93001010EC /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4DAECD168AFB93001010EC /* add.png */; };
+		DF4DAED7168AFB93001010EC /* cancel-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4DAECE168AFB93001010EC /* cancel-button.png */; };
+		DF4DAED8168AFB93001010EC /* main-image-border.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4DAECF168AFB93001010EC /* main-image-border.png */; };
+		DF4DAED9168AFB93001010EC /* pop-up-bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4DAED0168AFB93001010EC /* pop-up-bottom.png */; };
+		DF4DAEDA168AFB93001010EC /* pop-up-top.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4DAED1168AFB93001010EC /* pop-up-top.png */; };
+		DF4DAEDC168AFB93001010EC /* pop-up=midd.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4DAED3168AFB93001010EC /* pop-up=midd.png */; };
+		DF4DAEDD168AFB93001010EC /* quantity-box.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4DAED4168AFB93001010EC /* quantity-box.png */; };
+		DF4DAEDE168AFB93001010EC /* spcl-instrcuction-box.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4DAED5168AFB93001010EC /* spcl-instrcuction-box.png */; };
+		DF4DAEE0168B00D6001010EC /* additempoupimgbig.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4DAEDF168B00D6001010EC /* additempoupimgbig.png */; };
+		DF522BAD1679FE1A0032BFAA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF522BAC1679FE1A0032BFAA /* UIKit.framework */; };
+		DF522BAF1679FE1A0032BFAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF522BAE1679FE1A0032BFAA /* Foundation.framework */; };
+		DF522BB11679FE1A0032BFAA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF522BB01679FE1A0032BFAA /* CoreGraphics.framework */; };
+		DF522BB71679FE1A0032BFAA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF522BB51679FE1A0032BFAA /* InfoPlist.strings */; };
+		DF522BB91679FE1B0032BFAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF522BB81679FE1B0032BFAA /* main.m */; };
+		DF522BBD1679FE1B0032BFAA /* iRestaurantsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF522BBC1679FE1B0032BFAA /* iRestaurantsAppDelegate.m */; };
+		DF522BC31679FE1B0032BFAA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF522BC21679FE1B0032BFAA /* Default-568h@2x.png */; };
+		DF522BCB1679FE1B0032BFAA /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF522BCA1679FE1B0032BFAA /* SenTestingKit.framework */; };
+		DF522BCC1679FE1B0032BFAA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF522BAC1679FE1A0032BFAA /* UIKit.framework */; };
+		DF522BCD1679FE1B0032BFAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF522BAE1679FE1A0032BFAA /* Foundation.framework */; };
+		DF522BD51679FE1B0032BFAA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF522BD31679FE1B0032BFAA /* InfoPlist.strings */; };
+		DF522BD81679FE1B0032BFAA /* iRestaurants_UniversalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF522BD71679FE1B0032BFAA /* iRestaurants_UniversalTests.m */; };
+		DF522BE31679FF070032BFAA /* iRestaurantsLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF522BE21679FF070032BFAA /* iRestaurantsLoginViewController.m */; };
+		DF522BE61679FF940032BFAA /* iRestaurantsHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF522BE51679FF940032BFAA /* iRestaurantsHomeViewController.m */; };
+		DF522BF8167A04250032BFAA /* loginbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = DF522BF3167A04250032BFAA /* loginbtn.png */; };
+		DF522BF9167A04250032BFAA /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DF522BF4167A04250032BFAA /* bg.png */; };
+		DF522BFA167A04250032BFAA /* login-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DF522BF5167A04250032BFAA /* login-bg.png */; };
+		DF522BFB167A04250032BFAA /* login-table.png in Resources */ = {isa = PBXBuildFile; fileRef = DF522BF6167A04250032BFAA /* login-table.png */; };
+		DF522BFC167A04250032BFAA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DF522BF7167A04250032BFAA /* logo.png */; };
+		DF59596E16C677DE003C7B67 /* close-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DF59596716C677DE003C7B67 /* close-button.png */; };
+		DF59596F16C677DE003C7B67 /* dine-in.png in Resources */ = {isa = PBXBuildFile; fileRef = DF59596816C677DE003C7B67 /* dine-in.png */; };
+		DF59597016C677DE003C7B67 /* pending.png in Resources */ = {isa = PBXBuildFile; fileRef = DF59596916C677DE003C7B67 /* pending.png */; };
+		DF59597116C677DE003C7B67 /* print-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DF59596A16C677DE003C7B67 /* print-icon.png */; };
+		DF59597216C677DE003C7B67 /* PrinterKiller_Printer.png in Resources */ = {isa = PBXBuildFile; fileRef = DF59596B16C677DE003C7B67 /* PrinterKiller_Printer.png */; };
+		DF59597316C677DE003C7B67 /* process.png in Resources */ = {isa = PBXBuildFile; fileRef = DF59596C16C677DE003C7B67 /* process.png */; };
+		DF59597416C677DE003C7B67 /* take-away.png in Resources */ = {isa = PBXBuildFile; fileRef = DF59596D16C677DE003C7B67 /* take-away.png */; };
+		DF63A7F616D4D03800A585B0 /* iRestaurantsNewOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF63A7F516D4D03800A585B0 /* iRestaurantsNewOrderViewController.m */; };
+		DF662FB516D6401800EAB8D1 /* basegraphbg.png in Resources */ = {isa = PBXBuildFile; fileRef = DF662FB416D6401800EAB8D1 /* basegraphbg.png */; };
+		DF72F71616831693001659DC /* category-image-box.png in Resources */ = {isa = PBXBuildFile; fileRef = DF72F71516831693001659DC /* category-image-box.png */; };
+		DF72F71916832832001659DC /* main-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DF72F71816832832001659DC /* main-bg.png */; };
+		DF72F71D16832920001659DC /* iteambg.png in Resources */ = {isa = PBXBuildFile; fileRef = DF72F71A1683291F001659DC /* iteambg.png */; };
+		DF72F71E16832920001659DC /* pricebar.png in Resources */ = {isa = PBXBuildFile; fileRef = DF72F71B16832920001659DC /* pricebar.png */; };
+		DF72F71F16832920001659DC /* pricewithiteam.png in Resources */ = {isa = PBXBuildFile; fileRef = DF72F71C16832920001659DC /* pricewithiteam.png */; };
+		DF72F72116832E53001659DC /* iteamsmallpic.png in Resources */ = {isa = PBXBuildFile; fileRef = DF72F72016832E53001659DC /* iteamsmallpic.png */; };
+		DF7C34CF169572B700135299 /* GetiRestaurantsCatiteams.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C34CE169572B700135299 /* GetiRestaurantsCatiteams.m */; };
+		DF9A82FD16BFE0500055744E /* doneactive.png in Resources */ = {isa = PBXBuildFile; fileRef = DF9A82FA16BFE04F0055744E /* doneactive.png */; };
+		DF9A82FE16BFE0500055744E /* done.png in Resources */ = {isa = PBXBuildFile; fileRef = DF9A82FB16BFE04F0055744E /* done.png */; };
+		DF9A82FF16BFE0500055744E /* prnding.png in Resources */ = {isa = PBXBuildFile; fileRef = DF9A82FC16BFE0500055744E /* prnding.png */; };
+		DF9A830216BFE8050055744E /* poup1024x768.png in Resources */ = {isa = PBXBuildFile; fileRef = DF9A830116BFE8050055744E /* poup1024x768.png */; };
+		DF9A830616BFED3F0055744E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9A830516BFED3F0055744E /* QuartzCore.framework */; };
+		DFB7DC9D1695AF07000DFD2A /* GetiRestaurantsCatsubIteam.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB7DC9C1695AF07000DFD2A /* GetiRestaurantsCatsubIteam.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF522BCE1679FE1B0032BFAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF522B9F1679FE1A0032BFAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF522BA71679FE1A0032BFAA;
+			remoteInfo = "iRestaurants Universal";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6833BA1816AF20F60001AC1A /* closex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closex.png; sourceTree = "<group>"; };
+		DF034A4516D766F200BC5C44 /* graphnavimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graphnavimage.png; sourceTree = "<group>"; };
+		DF034A4816D76B8700BC5C44 /* backbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbtn.png; sourceTree = "<group>"; };
+		DF123B9916D2747100E6D658 /* back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-button.png"; sourceTree = "<group>"; };
+		DF16410F16C38A8A00C7B08D /* printalldetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = printalldetail.png; sourceTree = "<group>"; };
+		DF1C9FB516CF5EB300249052 /* iRestaurantsGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRestaurantsGraphViewController.h; sourceTree = "<group>"; };
+		DF1C9FB616CF5EB300249052 /* iRestaurantsGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRestaurantsGraphViewController.m; sourceTree = "<group>"; };
+		DF1C9FB916CF5FF300249052 /* bar_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_orange.png; sourceTree = "<group>"; };
+		DF1C9FBA16CF5FF300249052 /* bar_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_purple.png; sourceTree = "<group>"; };
+		DF1C9FBB16CF5FF300249052 /* bar_selector_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_selector_orange.png; sourceTree = "<group>"; };
+		DF1C9FBC16CF5FF300249052 /* bar_selector_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_selector_purple.png; sourceTree = "<group>"; };
+		DF1C9FC116CF678D00249052 /* graphsmallbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graphsmallbg.png; sourceTree = "<group>"; };
+		DF1DD6AE16B93A9500C7085B /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		DF1DD6B016B93BA600C7085B /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus.png; sourceTree = "<group>"; };
+		DF20077316C62BB100D94695 /* poup996x909.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poup996x909.png; sourceTree = "<group>"; };
+		DF20077616C6305A00D94695 /* cc-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cc-button.png"; sourceTree = "<group>"; };
+		DF20077816C6306200D94695 /* cash-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cash-button.png"; sourceTree = "<group>"; };
+		DF20077A16C63B2400D94695 /* reciept-no-field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reciept-no-field.png"; sourceTree = "<group>"; };
+		DF20077C16C646E100D94695 /* submit-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "submit-button.png"; sourceTree = "<group>"; };
+		DF20077E16C648F800D94695 /* text-field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text-field.png"; sourceTree = "<group>"; };
+		DF20A8C816A95B8500FDE326 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
+		DF20A8C916A95B8500FDE326 /* clear-table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clear-table.png"; sourceTree = "<group>"; };
+		DF20A8CA16A95B8500FDE326 /* update-order.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "update-order.png"; sourceTree = "<group>"; };
+		DF20A8CF16A97A3300FDE326 /* update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = update.png; sourceTree = "<group>"; };
+		DF23E2E9169D4E45005A8876 /* GetiRestaurantsAllorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetiRestaurantsAllorder.h; sourceTree = "<group>"; };
+		DF23E2EA169D4E45005A8876 /* GetiRestaurantsAllorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetiRestaurantsAllorder.m; sourceTree = "<group>"; };
+		DF2B6E7D16DF515D00C0C80E /* order-row.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "order-row.png"; sourceTree = "<group>"; };
+		DF2B6E7F16DF6CF800C0C80E /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
+		DF2B6E8116DF7B3600C0C80E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		DF2CF5F0168828CF00D87763 /* itheamthumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = itheamthumb.png; sourceTree = "<group>"; };
+		DF2CF5F316882FE900D87763 /* total-price-head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "total-price-head.png"; sourceTree = "<group>"; };
+		DF2CF5F51688391700D87763 /* price-tag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "price-tag.png"; sourceTree = "<group>"; };
+		DF2F2D56167B4CE200800097 /* bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottom.png; sourceTree = "<group>"; };
+		DF2F2D57167B4CE200800097 /* category-heading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "category-heading.png"; sourceTree = "<group>"; };
+		DF2F2D58167B4CE200800097 /* item-heading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-heading.png"; sourceTree = "<group>"; };
+		DF2F2D59167B4CE200800097 /* items-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "items-bg.png"; sourceTree = "<group>"; };
+		DF32A51C168081970055242A /* list-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-icon.png"; sourceTree = "<group>"; };
+		DF32A51F168081AF0055242A /* setting-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-icon.png"; sourceTree = "<group>"; };
+		DF32A521168083200055242A /* all-orders.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all-orders.png"; sourceTree = "<group>"; };
+		DF35CCB5168C440B00F926E2 /* allordertable-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "allordertable-bg.png"; sourceTree = "<group>"; };
+		DF35CCB8168C450C00F926E2 /* heading-top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heading-top.png"; sourceTree = "<group>"; };
+		DF3B43C41685A9F300FD39E5 /* submit-order.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "submit-order.png"; sourceTree = "<group>"; };
+		DF3B43C71685AB7E00FD39E5 /* product-row.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "product-row.png"; sourceTree = "<group>"; };
+		DF4DAEC7168AED2B001010EC /* clear-table-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clear-table-button.png"; sourceTree = "<group>"; };
+		DF4DAECA168AEEC6001010EC /* discount-table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "discount-table.png"; sourceTree = "<group>"; };
+		DF4DAECD168AFB93001010EC /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		DF4DAECE168AFB93001010EC /* cancel-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel-button.png"; sourceTree = "<group>"; };
+		DF4DAECF168AFB93001010EC /* main-image-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main-image-border.png"; sourceTree = "<group>"; };
+		DF4DAED0168AFB93001010EC /* pop-up-bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop-up-bottom.png"; sourceTree = "<group>"; };
+		DF4DAED1168AFB93001010EC /* pop-up-top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop-up-top.png"; sourceTree = "<group>"; };
+		DF4DAED3168AFB93001010EC /* pop-up=midd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop-up=midd.png"; sourceTree = "<group>"; };
+		DF4DAED4168AFB93001010EC /* quantity-box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quantity-box.png"; sourceTree = "<group>"; };
+		DF4DAED5168AFB93001010EC /* spcl-instrcuction-box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spcl-instrcuction-box.png"; sourceTree = "<group>"; };
+		DF4DAEDF168B00D6001010EC /* additempoupimgbig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = additempoupimgbig.png; sourceTree = "<group>"; };
+		DF522BA81679FE1A0032BFAA /* iRestaurants Universal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iRestaurants Universal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF522BAC1679FE1A0032BFAA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DF522BAE1679FE1A0032BFAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DF522BB01679FE1A0032BFAA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DF522BB41679FE1A0032BFAA /* iRestaurants Universal-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iRestaurants Universal-Info.plist"; sourceTree = "<group>"; };
+		DF522BB61679FE1A0032BFAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DF522BB81679FE1B0032BFAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DF522BBA1679FE1B0032BFAA /* iRestaurants Universal-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iRestaurants Universal-Prefix.pch"; sourceTree = "<group>"; };
+		DF522BBB1679FE1B0032BFAA /* iRestaurantsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iRestaurantsAppDelegate.h; sourceTree = "<group>"; };
+		DF522BBC1679FE1B0032BFAA /* iRestaurantsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iRestaurantsAppDelegate.m; sourceTree = "<group>"; };
+		DF522BC21679FE1B0032BFAA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DF522BC91679FE1B0032BFAA /* iRestaurants UniversalTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iRestaurants UniversalTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF522BCA1679FE1B0032BFAA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DF522BD21679FE1B0032BFAA /* iRestaurants UniversalTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iRestaurants UniversalTests-Info.plist"; sourceTree = "<group>"; };
+		DF522BD41679FE1B0032BFAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DF522BD61679FE1B0032BFAA /* iRestaurants_UniversalTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iRestaurants_UniversalTests.h; sourceTree = "<group>"; };
+		DF522BD71679FE1B0032BFAA /* iRestaurants_UniversalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iRestaurants_UniversalTests.m; sourceTree = "<group>"; };
+		DF522BE11679FF070032BFAA /* iRestaurantsLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRestaurantsLoginViewController.h; sourceTree = "<group>"; };
+		DF522BE21679FF070032BFAA /* iRestaurantsLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRestaurantsLoginViewController.m; sourceTree = "<group>"; };
+		DF522BE41679FF940032BFAA /* iRestaurantsHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRestaurantsHomeViewController.h; sourceTree = "<group>"; };
+		DF522BE51679FF940032BFAA /* iRestaurantsHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRestaurantsHomeViewController.m; sourceTree = "<group>"; };
+		DF522BF3167A04250032BFAA /* loginbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginbtn.png; sourceTree = "<group>"; };
+		DF522BF4167A04250032BFAA /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		DF522BF5167A04250032BFAA /* login-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-bg.png"; sourceTree = "<group>"; };
+		DF522BF6167A04250032BFAA /* login-table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-table.png"; sourceTree = "<group>"; };
+		DF522BF7167A04250032BFAA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		DF59596716C677DE003C7B67 /* close-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-button.png"; sourceTree = "<group>"; };
+		DF59596816C677DE003C7B67 /* dine-in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dine-in.png"; sourceTree = "<group>"; };
+		DF59596916C677DE003C7B67 /* pending.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pending.png; sourceTree = "<group>"; };
+		DF59596A16C677DE003C7B67 /* print-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "print-icon.png"; sourceTree = "<group>"; };
+		DF59596B16C677DE003C7B67 /* PrinterKiller_Printer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PrinterKiller_Printer.png; sourceTree = "<group>"; };
+		DF59596C16C677DE003C7B67 /* process.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = process.png; sourceTree = "<group>"; };
+		DF59596D16C677DE003C7B67 /* take-away.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "take-away.png"; sourceTree = "<group>"; };
+		DF63A7F416D4D03800A585B0 /* iRestaurantsNewOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRestaurantsNewOrderViewController.h; sourceTree = "<group>"; };
+		DF63A7F516D4D03800A585B0 /* iRestaurantsNewOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRestaurantsNewOrderViewController.m; sourceTree = "<group>"; };
+		DF662FB416D6401800EAB8D1 /* basegraphbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basegraphbg.png; sourceTree = "<group>"; };
+		DF72F71516831693001659DC /* category-image-box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "category-image-box.png"; sourceTree = "<group>"; };
+		DF72F717168327C0001659DC /* iRestaurants Universal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "iRestaurants Universal.entitlements"; sourceTree = "<group>"; };
+		DF72F71816832832001659DC /* main-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main-bg.png"; sourceTree = "<group>"; };
+		DF72F71A1683291F001659DC /* iteambg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iteambg.png; sourceTree = "<group>"; };
+		DF72F71B16832920001659DC /* pricebar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pricebar.png; sourceTree = "<group>"; };
+		DF72F71C16832920001659DC /* pricewithiteam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pricewithiteam.png; sourceTree = "<group>"; };
+		DF72F72016832E53001659DC /* iteamsmallpic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iteamsmallpic.png; sourceTree = "<group>"; };
+		DF7C34CD169572B700135299 /* GetiRestaurantsCatiteams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetiRestaurantsCatiteams.h; sourceTree = "<group>"; };
+		DF7C34CE169572B700135299 /* GetiRestaurantsCatiteams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetiRestaurantsCatiteams.m; sourceTree = "<group>"; };
+		DF9A82FA16BFE04F0055744E /* doneactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doneactive.png; sourceTree = "<group>"; };
+		DF9A82FB16BFE04F0055744E /* done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = done.png; sourceTree = "<group>"; };
+		DF9A82FC16BFE0500055744E /* prnding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prnding.png; sourceTree = "<group>"; };
+		DF9A830116BFE8050055744E /* poup1024x768.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poup1024x768.png; sourceTree = "<group>"; };
+		DF9A830516BFED3F0055744E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DFB7DC9B1695AF07000DFD2A /* GetiRestaurantsCatsubIteam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetiRestaurantsCatsubIteam.h; sourceTree = "<group>"; };
+		DFB7DC9C1695AF07000DFD2A /* GetiRestaurantsCatsubIteam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetiRestaurantsCatsubIteam.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF522BA51679FE1A0032BFAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF9A830616BFED3F0055744E /* QuartzCore.framework in Frameworks */,
+				DF522BAD1679FE1A0032BFAA /* UIKit.framework in Frameworks */,
+				DF522BAF1679FE1A0032BFAA /* Foundation.framework in Frameworks */,
+				DF522BB11679FE1A0032BFAA /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF522BC51679FE1B0032BFAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF522BCB1679FE1B0032BFAA /* SenTestingKit.framework in Frameworks */,
+				DF522BCC1679FE1B0032BFAA /* UIKit.framework in Frameworks */,
+				DF522BCD1679FE1B0032BFAA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF0E70C0169815A900D2491D /* GetServiceClass */ = {
+			isa = PBXGroup;
+			children = (
+				DF123B9916D2747100E6D658 /* back-button.png */,
+				DF7C34CD169572B700135299 /* GetiRestaurantsCatiteams.h */,
+				DF7C34CE169572B700135299 /* GetiRestaurantsCatiteams.m */,
+				DFB7DC9B1695AF07000DFD2A /* GetiRestaurantsCatsubIteam.h */,
+				DFB7DC9C1695AF07000DFD2A /* GetiRestaurantsCatsubIteam.m */,
+				DF23E2E9169D4E45005A8876 /* GetiRestaurantsAllorder.h */,
+				DF23E2EA169D4E45005A8876 /* GetiRestaurantsAllorder.m */,
+			);
+			name = GetServiceClass;
+			sourceTree = "<group>";
+		};
+		DF4DAECC168AFB04001010EC /* Additeampoup */ = {
+			isa = PBXGroup;
+			children = (
+				DF2B6E7D16DF515D00C0C80E /* order-row.png */,
+				DF1DD6AE16B93A9500C7085B /* plus.png */,
+				6833BA1816AF20F60001AC1A /* closex.png */,
+				DF1DD6B016B93BA600C7085B /* minus.png */,
+				DF4DAEDF168B00D6001010EC /* additempoupimgbig.png */,
+				DF4DAECD168AFB93001010EC /* add.png */,
+				DF4DAECE168AFB93001010EC /* cancel-button.png */,
+				DF4DAECF168AFB93001010EC /* main-image-border.png */,
+				DF4DAED0168AFB93001010EC /* pop-up-bottom.png */,
+				DF4DAED1168AFB93001010EC /* pop-up-top.png */,
+				DF4DAED3168AFB93001010EC /* pop-up=midd.png */,
+				DF4DAED4168AFB93001010EC /* quantity-box.png */,
+				DF4DAED5168AFB93001010EC /* spcl-instrcuction-box.png */,
+			);
+			name = Additeampoup;
+			sourceTree = "<group>";
+		};
+		DF522B9D1679FE1A0032BFAA = {
+			isa = PBXGroup;
+			children = (
+				DF9A830516BFED3F0055744E /* QuartzCore.framework */,
+				DF522BB21679FE1A0032BFAA /* iRestaurants Universal */,
+				DF522BD01679FE1B0032BFAA /* iRestaurants UniversalTests */,
+				DF522BAB1679FE1A0032BFAA /* Frameworks */,
+				DF522BA91679FE1A0032BFAA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF522BA91679FE1A0032BFAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF522BA81679FE1A0032BFAA /* iRestaurants Universal.app */,
+				DF522BC91679FE1B0032BFAA /* iRestaurants UniversalTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF522BAB1679FE1A0032BFAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF522BAC1679FE1A0032BFAA /* UIKit.framework */,
+				DF522BAE1679FE1A0032BFAA /* Foundation.framework */,
+				DF522BB01679FE1A0032BFAA /* CoreGraphics.framework */,
+				DF522BCA1679FE1B0032BFAA /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF522BB21679FE1A0032BFAA /* iRestaurants Universal */ = {
+			isa = PBXGroup;
+			children = (
+				DF0E70C0169815A900D2491D /* GetServiceClass */,
+				DF522BF2167A03C90032BFAA /* Resources */,
+				DF522BEF167A039A0032BFAA /* AppClass */,
+				DF522BF0167A03AA0032BFAA /* LoginClass */,
+				DF63A7F916D4DCD100A585B0 /* Place New order Class */,
+				DF63A7F816D4DCBD00A585B0 /* Graph View Class */,
+				DF522BF1167A03B80032BFAA /* HomeViewClass */,
+				DF522BB31679FE1A0032BFAA /* Supporting Files */,
+			);
+			path = "iRestaurants Universal";
+			sourceTree = "<group>";
+		};
+		DF522BB31679FE1A0032BFAA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF522BB41679FE1A0032BFAA /* iRestaurants Universal-Info.plist */,
+				DF522BB51679FE1A0032BFAA /* InfoPlist.strings */,
+				DF522BB81679FE1B0032BFAA /* main.m */,
+				DF522BBA1679FE1B0032BFAA /* iRestaurants Universal-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF522BD01679FE1B0032BFAA /* iRestaurants UniversalTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF522BD61679FE1B0032BFAA /* iRestaurants_UniversalTests.h */,
+				DF522BD71679FE1B0032BFAA /* iRestaurants_UniversalTests.m */,
+				DF522BD11679FE1B0032BFAA /* Supporting Files */,
+			);
+			path = "iRestaurants UniversalTests";
+			sourceTree = "<group>";
+		};
+		DF522BD11679FE1B0032BFAA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF522BD21679FE1B0032BFAA /* iRestaurants UniversalTests-Info.plist */,
+				DF522BD31679FE1B0032BFAA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF522BEF167A039A0032BFAA /* AppClass */ = {
+			isa = PBXGroup;
+			children = (
+				DF522BBB1679FE1B0032BFAA /* iRestaurantsAppDelegate.h */,
+				DF522BBC1679FE1B0032BFAA /* iRestaurantsAppDelegate.m */,
+			);
+			name = AppClass;
+			sourceTree = "<group>";
+		};
+		DF522BF0167A03AA0032BFAA /* LoginClass */ = {
+			isa = PBXGroup;
+			children = (
+				DF522BE11679FF070032BFAA /* iRestaurantsLoginViewController.h */,
+				DF522BE21679FF070032BFAA /* iRestaurantsLoginViewController.m */,
+			);
+			name = LoginClass;
+			sourceTree = "<group>";
+		};
+		DF522BF1167A03B80032BFAA /* HomeViewClass */ = {
+			isa = PBXGroup;
+			children = (
+				DF522BE41679FF940032BFAA /* iRestaurantsHomeViewController.h */,
+				DF522BE51679FF940032BFAA /* iRestaurantsHomeViewController.m */,
+			);
+			name = HomeViewClass;
+			sourceTree = "<group>";
+		};
+		DF522BF2167A03C90032BFAA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF2B6E8116DF7B3600C0C80E /* icon.png */,
+				DF2B6E7F16DF6CF800C0C80E /* Default-Landscape.png */,
+				DF72F717168327C0001659DC /* iRestaurants Universal.entitlements */,
+				DF522BC21679FE1B0032BFAA /* Default-568h@2x.png */,
+				DF16410F16C38A8A00C7B08D /* printalldetail.png */,
+				DF9A82FA16BFE04F0055744E /* doneactive.png */,
+				DF9A82FB16BFE04F0055744E /* done.png */,
+				DF9A82FC16BFE0500055744E /* prnding.png */,
+				DF20077A16C63B2400D94695 /* reciept-no-field.png */,
+				DF20077316C62BB100D94695 /* poup996x909.png */,
+				DF20077816C6306200D94695 /* cash-button.png */,
+				DF20077616C6305A00D94695 /* cc-button.png */,
+				DF9A830116BFE8050055744E /* poup1024x768.png */,
+				DF20077C16C646E100D94695 /* submit-button.png */,
+				DF59596716C677DE003C7B67 /* close-button.png */,
+				DF59596816C677DE003C7B67 /* dine-in.png */,
+				DF59596916C677DE003C7B67 /* pending.png */,
+				DF59596A16C677DE003C7B67 /* print-icon.png */,
+				DF59596B16C677DE003C7B67 /* PrinterKiller_Printer.png */,
+				DF59596C16C677DE003C7B67 /* process.png */,
+				DF59596D16C677DE003C7B67 /* take-away.png */,
+				DF20A8CF16A97A3300FDE326 /* update.png */,
+				DF4DAECC168AFB04001010EC /* Additeampoup */,
+				DF4DAECA168AEEC6001010EC /* discount-table.png */,
+				DF20A8C916A95B8500FDE326 /* clear-table.png */,
+				DF20A8CA16A95B8500FDE326 /* update-order.png */,
+				DF20A8C816A95B8500FDE326 /* cancel.png */,
+				DF4DAEC7168AED2B001010EC /* clear-table-button.png */,
+				DF35CCB8168C450C00F926E2 /* heading-top.png */,
+				DF35CCB5168C440B00F926E2 /* allordertable-bg.png */,
+				DF3B43C71685AB7E00FD39E5 /* product-row.png */,
+				DF3B43C41685A9F300FD39E5 /* submit-order.png */,
+				DF2F2D56167B4CE200800097 /* bottom.png */,
+				DF2CF5F0168828CF00D87763 /* itheamthumb.png */,
+				DF2F2D57167B4CE200800097 /* category-heading.png */,
+				DF72F72016832E53001659DC /* iteamsmallpic.png */,
+				DF2F2D58167B4CE200800097 /* item-heading.png */,
+				DF522BF7167A04250032BFAA /* logo.png */,
+				DF2F2D59167B4CE200800097 /* items-bg.png */,
+				DF72F71816832832001659DC /* main-bg.png */,
+				DF2CF5F51688391700D87763 /* price-tag.png */,
+				DF522BF3167A04250032BFAA /* loginbtn.png */,
+				DF522BF4167A04250032BFAA /* bg.png */,
+				DF522BF5167A04250032BFAA /* login-bg.png */,
+				DF522BF6167A04250032BFAA /* login-table.png */,
+				DF32A51C168081970055242A /* list-icon.png */,
+				DF32A521168083200055242A /* all-orders.png */,
+				DF32A51F168081AF0055242A /* setting-icon.png */,
+				DF72F71516831693001659DC /* category-image-box.png */,
+				DF72F71A1683291F001659DC /* iteambg.png */,
+				DF2CF5F316882FE900D87763 /* total-price-head.png */,
+				DF72F71B16832920001659DC /* pricebar.png */,
+				DF20077E16C648F800D94695 /* text-field.png */,
+				DF72F71C16832920001659DC /* pricewithiteam.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DF63A7F816D4DCBD00A585B0 /* Graph View Class */ = {
+			isa = PBXGroup;
+			children = (
+				DF034A4816D76B8700BC5C44 /* backbtn.png */,
+				DF034A4516D766F200BC5C44 /* graphnavimage.png */,
+				DF662FB416D6401800EAB8D1 /* basegraphbg.png */,
+				DF1C9FB916CF5FF300249052 /* bar_orange.png */,
+				DF1C9FBA16CF5FF300249052 /* bar_purple.png */,
+				DF1C9FBB16CF5FF300249052 /* bar_selector_orange.png */,
+				DF1C9FBC16CF5FF300249052 /* bar_selector_purple.png */,
+				DF1C9FC116CF678D00249052 /* graphsmallbg.png */,
+				DF1C9FB516CF5EB300249052 /* iRestaurantsGraphViewController.h */,
+				DF1C9FB616CF5EB300249052 /* iRestaurantsGraphViewController.m */,
+			);
+			name = "Graph View Class";
+			sourceTree = "<group>";
+		};
+		DF63A7F916D4DCD100A585B0 /* Place New order Class */ = {
+			isa = PBXGroup;
+			children = (
+				DF63A7F416D4D03800A585B0 /* iRestaurantsNewOrderViewController.h */,
+				DF63A7F516D4D03800A585B0 /* iRestaurantsNewOrderViewController.m */,
+			);
+			name = "Place New order Class";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF522BA71679FE1A0032BFAA /* iRestaurants Universal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF522BDB1679FE1B0032BFAA /* Build configuration list for PBXNativeTarget "iRestaurants Universal" */;
+			buildPhases = (
+				DF522BA41679FE1A0032BFAA /* Sources */,
+				DF522BA51679FE1A0032BFAA /* Frameworks */,
+				DF522BA61679FE1A0032BFAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iRestaurants Universal";
+			productName = "iRestaurants Universal";
+			productReference = DF522BA81679FE1A0032BFAA /* iRestaurants Universal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DF522BC81679FE1B0032BFAA /* iRestaurants UniversalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF522BDE1679FE1B0032BFAA /* Build configuration list for PBXNativeTarget "iRestaurants UniversalTests" */;
+			buildPhases = (
+				DF522BC41679FE1B0032BFAA /* Sources */,
+				DF522BC51679FE1B0032BFAA /* Frameworks */,
+				DF522BC61679FE1B0032BFAA /* Resources */,
+				DF522BC71679FE1B0032BFAA /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF522BCF1679FE1B0032BFAA /* PBXTargetDependency */,
+			);
+			name = "iRestaurants UniversalTests";
+			productName = "iRestaurants UniversalTests";
+			productReference = DF522BC91679FE1B0032BFAA /* iRestaurants UniversalTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF522B9F1679FE1A0032BFAA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = iRestaurants;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Dex Consulting";
+				TargetAttributes = {
+					DF522BA71679FE1A0032BFAA = {
+						DevelopmentTeam = 8E6M7S3Q9P;
+					};
+				};
+			};
+			buildConfigurationList = DF522BA21679FE1A0032BFAA /* Build configuration list for PBXProject "iRestaurants Universal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DF522B9D1679FE1A0032BFAA;
+			productRefGroup = DF522BA91679FE1A0032BFAA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF522BA71679FE1A0032BFAA /* iRestaurants Universal */,
+				DF522BC81679FE1B0032BFAA /* iRestaurants UniversalTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF522BA61679FE1A0032BFAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF522BB71679FE1A0032BFAA /* InfoPlist.strings in Resources */,
+				DF522BC31679FE1B0032BFAA /* Default-568h@2x.png in Resources */,
+				DF522BF8167A04250032BFAA /* loginbtn.png in Resources */,
+				DF522BF9167A04250032BFAA /* bg.png in Resources */,
+				DF522BFA167A04250032BFAA /* login-bg.png in Resources */,
+				DF522BFB167A04250032BFAA /* login-table.png in Resources */,
+				DF522BFC167A04250032BFAA /* logo.png in Resources */,
+				DF2F2D5A167B4CE200800097 /* bottom.png in Resources */,
+				DF2F2D5B167B4CE200800097 /* category-heading.png in Resources */,
+				DF2F2D5C167B4CE200800097 /* item-heading.png in Resources */,
+				DF2F2D5D167B4CE200800097 /* items-bg.png in Resources */,
+				DF32A51D168081970055242A /* list-icon.png in Resources */,
+				DF32A520168081AF0055242A /* setting-icon.png in Resources */,
+				DF32A522168083200055242A /* all-orders.png in Resources */,
+				DF72F71616831693001659DC /* category-image-box.png in Resources */,
+				DF72F71916832832001659DC /* main-bg.png in Resources */,
+				DF72F71D16832920001659DC /* iteambg.png in Resources */,
+				DF72F71E16832920001659DC /* pricebar.png in Resources */,
+				DF72F71F16832920001659DC /* pricewithiteam.png in Resources */,
+				DF72F72116832E53001659DC /* iteamsmallpic.png in Resources */,
+				DF3B43C51685A9F300FD39E5 /* submit-order.png in Resources */,
+				DF3B43C81685AB7E00FD39E5 /* product-row.png in Resources */,
+				DF2CF5F1168828CF00D87763 /* itheamthumb.png in Resources */,
+				DF2CF5F416882FE900D87763 /* total-price-head.png in Resources */,
+				DF2CF5F61688391700D87763 /* price-tag.png in Resources */,
+				DF4DAEC8168AED2B001010EC /* clear-table-button.png in Resources */,
+				DF4DAECB168AEEC6001010EC /* discount-table.png in Resources */,
+				DF4DAED6168AFB93001010EC /* add.png in Resources */,
+				DF4DAED7168AFB93001010EC /* cancel-button.png in Resources */,
+				DF4DAED8168AFB93001010EC /* main-image-border.png in Resources */,
+				DF4DAED9168AFB93001010EC /* pop-up-bottom.png in Resources */,
+				DF4DAEDA168AFB93001010EC /* pop-up-top.png in Resources */,
+				DF4DAEDC168AFB93001010EC /* pop-up=midd.png in Resources */,
+				DF4DAEDD168AFB93001010EC /* quantity-box.png in Resources */,
+				DF4DAEDE168AFB93001010EC /* spcl-instrcuction-box.png in Resources */,
+				DF4DAEE0168B00D6001010EC /* additempoupimgbig.png in Resources */,
+				DF35CCB6168C440B00F926E2 /* allordertable-bg.png in Resources */,
+				DF35CCB9168C450C00F926E2 /* heading-top.png in Resources */,
+				DF20A8CB16A95B8500FDE326 /* cancel.png in Resources */,
+				DF20A8CC16A95B8500FDE326 /* clear-table.png in Resources */,
+				DF20A8CD16A95B8500FDE326 /* update-order.png in Resources */,
+				DF20A8D016A97A3300FDE326 /* update.png in Resources */,
+				6833BA1916AF20F60001AC1A /* closex.png in Resources */,
+				DF1DD6AF16B93A9500C7085B /* plus.png in Resources */,
+				DF1DD6B116B93BA600C7085B /* minus.png in Resources */,
+				DF9A82FD16BFE0500055744E /* doneactive.png in Resources */,
+				DF9A82FE16BFE0500055744E /* done.png in Resources */,
+				DF9A82FF16BFE0500055744E /* prnding.png in Resources */,
+				DF9A830216BFE8050055744E /* poup1024x768.png in Resources */,
+				DF16411016C38A8A00C7B08D /* printalldetail.png in Resources */,
+				DF20077416C62BB100D94695 /* poup996x909.png in Resources */,
+				DF20077716C6305A00D94695 /* cc-button.png in Resources */,
+				DF20077916C6306200D94695 /* cash-button.png in Resources */,
+				DF20077B16C63B2400D94695 /* reciept-no-field.png in Resources */,
+				DF20077D16C646E100D94695 /* submit-button.png in Resources */,
+				DF20077F16C648F800D94695 /* text-field.png in Resources */,
+				DF59596E16C677DE003C7B67 /* close-button.png in Resources */,
+				DF59596F16C677DE003C7B67 /* dine-in.png in Resources */,
+				DF59597016C677DE003C7B67 /* pending.png in Resources */,
+				DF59597116C677DE003C7B67 /* print-icon.png in Resources */,
+				DF59597216C677DE003C7B67 /* PrinterKiller_Printer.png in Resources */,
+				DF59597316C677DE003C7B67 /* process.png in Resources */,
+				DF59597416C677DE003C7B67 /* take-away.png in Resources */,
+				DF1C9FBD16CF5FF300249052 /* bar_orange.png in Resources */,
+				DF1C9FBE16CF5FF300249052 /* bar_purple.png in Resources */,
+				DF1C9FBF16CF5FF300249052 /* bar_selector_orange.png in Resources */,
+				DF1C9FC016CF5FF300249052 /* bar_selector_purple.png in Resources */,
+				DF1C9FC216CF678D00249052 /* graphsmallbg.png in Resources */,
+				DF123B9A16D2747100E6D658 /* back-button.png in Resources */,
+				DF662FB516D6401800EAB8D1 /* basegraphbg.png in Resources */,
+				DF034A4616D766F200BC5C44 /* graphnavimage.png in Resources */,
+				DF034A4916D76B8700BC5C44 /* backbtn.png in Resources */,
+				DF2B6E7E16DF515D00C0C80E /* order-row.png in Resources */,
+				DF2B6E8016DF6CF800C0C80E /* Default-Landscape.png in Resources */,
+				DF2B6E8216DF7B3600C0C80E /* icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF522BC61679FE1B0032BFAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF522BD51679FE1B0032BFAA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DF522BC71679FE1B0032BFAA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF522BA41679FE1A0032BFAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF522BB91679FE1B0032BFAA /* main.m in Sources */,
+				DF522BBD1679FE1B0032BFAA /* iRestaurantsAppDelegate.m in Sources */,
+				DF522BE31679FF070032BFAA /* iRestaurantsLoginViewController.m in Sources */,
+				DF522BE61679FF940032BFAA /* iRestaurantsHomeViewController.m in Sources */,
+				DF7C34CF169572B700135299 /* GetiRestaurantsCatiteams.m in Sources */,
+				DFB7DC9D1695AF07000DFD2A /* GetiRestaurantsCatsubIteam.m in Sources */,
+				DF23E2EB169D4E45005A8876 /* GetiRestaurantsAllorder.m in Sources */,
+				DF1C9FB716CF5EB300249052 /* iRestaurantsGraphViewController.m in Sources */,
+				DF63A7F616D4D03800A585B0 /* iRestaurantsNewOrderViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF522BC41679FE1B0032BFAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF522BD81679FE1B0032BFAA /* iRestaurants_UniversalTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF522BCF1679FE1B0032BFAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF522BA71679FE1A0032BFAA /* iRestaurants Universal */;
+			targetProxy = DF522BCE1679FE1B0032BFAA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DF522BB51679FE1A0032BFAA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF522BB61679FE1A0032BFAA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DF522BD31679FE1B0032BFAA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF522BD41679FE1B0032BFAA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DF522BD91679FE1B0032BFAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DF522BDA1679FE1B0032BFAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF522BDC1679FE1B0032BFAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "iRestaurants Universal/iRestaurants Universal.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iRestaurants Universal/iRestaurants Universal-Prefix.pch";
+				INFOPLIST_FILE = "iRestaurants Universal/iRestaurants Universal-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DF522BDD1679FE1B0032BFAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "iRestaurants Universal/iRestaurants Universal.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iRestaurants Universal/iRestaurants Universal-Prefix.pch";
+				INFOPLIST_FILE = "iRestaurants Universal/iRestaurants Universal-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DF522BDF1679FE1B0032BFAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iRestaurants Universal.app/iRestaurants Universal";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dex Consulting";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dex Consulting";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iRestaurants Universal/iRestaurants Universal-Prefix.pch";
+				INFOPLIST_FILE = "iRestaurants UniversalTests/iRestaurants UniversalTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9D8D78AA-C350-457D-A998-FB4190E84773";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9D8D78AA-C350-457D-A998-FB4190E84773";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DF522BE01679FE1B0032BFAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iRestaurants Universal.app/iRestaurants Universal";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dex Consulting";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dex Consulting";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iRestaurants Universal/iRestaurants Universal-Prefix.pch";
+				INFOPLIST_FILE = "iRestaurants UniversalTests/iRestaurants UniversalTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9D8D78AA-C350-457D-A998-FB4190E84773";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9D8D78AA-C350-457D-A998-FB4190E84773";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		DFB7DCA91695F1F5000DFD2A /* Adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Adhoc;
+		};
+		DFB7DCAA1695F1F5000DFD2A /* Adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "iRestaurants Universal/iRestaurants Universal.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iRestaurants Universal/iRestaurants Universal-Prefix.pch";
+				INFOPLIST_FILE = "iRestaurants Universal/iRestaurants Universal-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Adhoc;
+		};
+		DFB7DCAB1695F1F5000DFD2A /* Adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iRestaurants Universal.app/iRestaurants Universal";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dex Consulting";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dex Consulting";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iRestaurants Universal/iRestaurants Universal-Prefix.pch";
+				INFOPLIST_FILE = "iRestaurants UniversalTests/iRestaurants UniversalTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9D8D78AA-C350-457D-A998-FB4190E84773";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9D8D78AA-C350-457D-A998-FB4190E84773";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Adhoc;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF522BA21679FE1A0032BFAA /* Build configuration list for PBXProject "iRestaurants Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF522BD91679FE1B0032BFAA /* Debug */,
+				DF522BDA1679FE1B0032BFAA /* Release */,
+				DFB7DCA91695F1F5000DFD2A /* Adhoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Adhoc;
+		};
+		DF522BDB1679FE1B0032BFAA /* Build configuration list for PBXNativeTarget "iRestaurants Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF522BDC1679FE1B0032BFAA /* Debug */,
+				DF522BDD1679FE1B0032BFAA /* Release */,
+				DFB7DCAA1695F1F5000DFD2A /* Adhoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Adhoc;
+		};
+		DF522BDE1679FE1B0032BFAA /* Build configuration list for PBXNativeTarget "iRestaurants UniversalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF522BDF1679FE1B0032BFAA /* Debug */,
+				DF522BE01679FE1B0032BFAA /* Release */,
+				DFB7DCAB1695F1F5000DFD2A /* Adhoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Adhoc;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF522B9F1679FE1A0032BFAA /* Project object */;
+}
