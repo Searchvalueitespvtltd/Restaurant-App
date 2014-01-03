@@ -36,7 +36,7 @@ BOOL stopdoublselection;
 	
 	NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];//create connection
 	
-	
+	NSLog(@"GetiRestaurantsCatsubIteam URL -----  %@",theRequest);
 	if( theConnection )	{
 		webData = [[NSMutableData data] retain];}
 	else	{

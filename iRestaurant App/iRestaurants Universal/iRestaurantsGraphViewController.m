@@ -172,6 +172,7 @@ NSString * calldayservicedate;
 	
     
     url = [NSURL URLWithString:[NSString stringWithFormat:@"http://204.197.244.110/~crmdalto/restaurant/index.php?graph"]];
+         NSLog(@"SALE SERVICE-----%@",url);
     }
     else  if(IsStockview){
         
@@ -186,7 +187,7 @@ NSString * calldayservicedate;
         
         url = [NSURL URLWithString:[NSString stringWithFormat:@"http://204.197.244.110/~crmdalto/restaurant/index.php?graph&date=%@",calldayservicedate]];
 
-        NSLog(@"STOCK SERVICE");
+        NSLog(@"STOCK SERVICE-----%@",url);
     
     
     
@@ -201,7 +202,7 @@ NSString * calldayservicedate;
 	[theRequest setHTTPBody: [soapMessage dataUsingEncoding:NSUTF8StringEncoding]]; //encoding sopmsg
 	
 	NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];//create connection
-	
+//	NSLog(@"graph URL-------%@",theRequest);
     if( theConnection )	{webData = [[NSMutableData data] retain];}
 	else{NSLog(@"theConnection is NULL");}
 	

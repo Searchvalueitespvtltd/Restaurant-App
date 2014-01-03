@@ -11,8 +11,13 @@
 #import "GetiRestaurantsCatiteams.h"
 #import "GetiRestaurantsCatsubIteam.h"
 #import "iRestaurantsGraphViewController.h"
+#import "ViewController.h"
+#import "GMGridView.h"
+#import <QuartzCore/QuartzCore.h>
+#import "Demo1ViewController.h"
+
 @protocol ViewAllCSCityViewDelegete;
-@interface iRestaurantsHomeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,GetCountryListDelegete,GetStatesListDelegete,NSXMLParserDelegate,UITextFieldDelegate>
+@interface iRestaurantsHomeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,GetCountryListDelegete,GetStatesListDelegete,NSXMLParserDelegate,UITextFieldDelegate,UIPrintInteractionControllerDelegate,GMGridViewDataSource, GMGridViewSortingDelegate, GMGridViewTransformationDelegate, GMGridViewActionDelegate>
 
 {
     
@@ -135,14 +140,32 @@
     UIButton * cancelpoupcornerbtn;
     UIButton * dininbtn;
     UIButton * takewaybtn;
+    UIButton *cateringbtn;
+    UIButton *smallQtyBtn;
+    UIButton *mediumQtyBtn;
+    UIButton *largeQtyBtn;
+    
+    
     UITextField * tokennotext;
     UILabel * ordertypelbl;
     UITextField *  recepttextfield;
     UIButton * cancelcardbtn;
     UITextField *  amtPaybalelbltxt;
     NSMutableArray * tokenarr;
+    NSMutableArray *timearr;
     id <ViewAllCSCityViewDelegete> delegate;
-//    
+    UIButton * printinactivebtn;
+    UIImageView *roworder;
+    UIButton * clickrowbtn;
+    UIView *backgroundImage;
+     UILabel * Timerlbl;
+    
+    
+    
+    
+//grid view variables
+     __gm_weak GMGridView *_gmGridView;
+     __gm_weak NSMutableArray *_currentData;
 }
 
 - (void)callWebService1:(id)sender;
@@ -151,7 +174,8 @@
 //@property(nonatomic, retain)UITableView * empNameTableView;
 //@property(nonatomic, retain)UIActivityIndicatorView * activityIndicatoor;
 @property(nonatomic, retain)id <ViewAllCSCityViewDelegete> delegate;
-
+@property(nonatomic, retain) NSString * tablenoglob;
+@property(nonatomic, assign) BOOL clickableBtn;
 //-(void)backbuttonAction;
 
 @end

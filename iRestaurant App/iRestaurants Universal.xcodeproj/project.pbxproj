@@ -46,6 +46,7 @@
 		DF32A522168083200055242A /* all-orders.png in Resources */ = {isa = PBXBuildFile; fileRef = DF32A521168083200055242A /* all-orders.png */; };
 		DF35CCB6168C440B00F926E2 /* allordertable-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DF35CCB5168C440B00F926E2 /* allordertable-bg.png */; };
 		DF35CCB9168C450C00F926E2 /* heading-top.png in Resources */ = {isa = PBXBuildFile; fileRef = DF35CCB8168C450C00F926E2 /* heading-top.png */; };
+		DF38AD1718683F6C0095D74B /* PrinterSetting-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DF38AD1618683F6C0095D74B /* PrinterSetting-icon.png */; };
 		DF3B43C51685A9F300FD39E5 /* submit-order.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3B43C41685A9F300FD39E5 /* submit-order.png */; };
 		DF3B43C81685AB7E00FD39E5 /* product-row.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3B43C71685AB7E00FD39E5 /* product-row.png */; };
 		DF4DAEC8168AED2B001010EC /* clear-table-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4DAEC7168AED2B001010EC /* clear-table-button.png */; };
@@ -99,6 +100,110 @@
 		DF9A82FF16BFE0500055744E /* prnding.png in Resources */ = {isa = PBXBuildFile; fileRef = DF9A82FC16BFE0500055744E /* prnding.png */; };
 		DF9A830216BFE8050055744E /* poup1024x768.png in Resources */ = {isa = PBXBuildFile; fileRef = DF9A830116BFE8050055744E /* poup1024x768.png */; };
 		DF9A830616BFED3F0055744E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9A830516BFED3F0055744E /* QuartzCore.framework */; };
+		DFA676B0187529EA00A7799E /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA676AF187529EA00A7799E /* OptionsViewController.m */; };
+		DFA676B318752AE100A7799E /* Demo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA676B218752AE100A7799E /* Demo1ViewController.m */; };
+		DFA676B61875410700A7799E /* blue-table.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA676B41875410700A7799E /* blue-table.png */; };
+		DFA676B71875410700A7799E /* red-table.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA676B51875410700A7799E /* red-table.png */; };
+		DFA676B9187562BD00A7799E /* red-table1.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA676B8187562BD00A7799E /* red-table1.png */; };
+		DFA676BB187566AE00A7799E /* blue-table1.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA676BA187566AE00A7799E /* blue-table1.png */; };
+		DFA6CF381869892900E43B03 /* order-row-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA6CF371869892900E43B03 /* order-row-selected.png */; };
+		DFA919051862B26E00A51C6A /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA9187A1862B26E00A51C6A /* AbstractActionSheetPicker.m */; };
+		DFA919061862B26E00A51C6A /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA9187C1862B26E00A51C6A /* ActionSheetStringPicker.m */; };
+		DFA919071862B26E00A51C6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA9187E1862B26E00A51C6A /* AppDelegate.m */; };
+		DFA919081862B26E00A51C6A /* BarcodePrintingMini.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918801862B26E00A51C6A /* BarcodePrintingMini.m */; };
+		DFA919091862B26E00A51C6A /* BarcodePrintingMini.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918811862B26E00A51C6A /* BarcodePrintingMini.xib */; };
+		DFA9190A1862B26E00A51C6A /* BarcodeSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918831862B26E00A51C6A /* BarcodeSelector.m */; };
+		DFA9190B1862B26E00A51C6A /* BarcodeSelector.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918841862B26E00A51C6A /* BarcodeSelector.xib */; };
+		DFA9190C1862B26E00A51C6A /* BarcodeSelector2D.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918861862B26E00A51C6A /* BarcodeSelector2D.m */; };
+		DFA9190D1862B26E00A51C6A /* BluetoothSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918881862B26E00A51C6A /* BluetoothSettingViewController.m */; };
+		DFA9190E1862B26E00A51C6A /* BluetoothSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918891862B26E00A51C6A /* BluetoothSettingViewController.xib */; };
+		DFA9190F1862B26E00A51C6A /* CheckConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA9188B1862B26E00A51C6A /* CheckConnectionViewController.m */; };
+		DFA919101862B26E00A51C6A /* CheckConnectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA9188C1862B26E00A51C6A /* CheckConnectionViewController.xib */; };
+		DFA919111862B26E00A51C6A /* code128.gif in Resources */ = {isa = PBXBuildFile; fileRef = DFA9188D1862B26E00A51C6A /* code128.gif */; };
+		DFA919121862B26E00A51C6A /* code128.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA9188F1862B26E00A51C6A /* code128.m */; };
+		DFA919131862B26E00A51C6A /* code128.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918901862B26E00A51C6A /* code128.xib */; };
+		DFA919141862B26E00A51C6A /* code39.gif in Resources */ = {isa = PBXBuildFile; fileRef = DFA918911862B26E00A51C6A /* code39.gif */; };
+		DFA919151862B26E00A51C6A /* code39.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918931862B26E00A51C6A /* code39.m */; };
+		DFA919161862B26E00A51C6A /* code39.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918941862B26E00A51C6A /* code39.xib */; };
+		DFA919171862B26E00A51C6A /* code93.gif in Resources */ = {isa = PBXBuildFile; fileRef = DFA918951862B26E00A51C6A /* code93.gif */; };
+		DFA919181862B26E00A51C6A /* code93.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918971862B26E00A51C6A /* code93.m */; };
+		DFA919191862B26E00A51C6A /* code93.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918981862B26E00A51C6A /* code93.xib */; };
+		DFA9191A1862B26E00A51C6A /* CommonTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA9189B1862B26E00A51C6A /* CommonTableView.m */; };
+		DFA9191B1862B26E00A51C6A /* CommonTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA9189C1862B26E00A51C6A /* CommonTableView.xib */; };
+		DFA9191C1862B26E00A51C6A /* Cut.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA9189E1862B26E00A51C6A /* Cut.m */; };
+		DFA9191D1862B26E00A51C6A /* Cut.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA9189F1862B26E00A51C6A /* Cut.xib */; };
+		DFA9191F1862B26E00A51C6A /* DKAirCashFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918A21862B26E00A51C6A /* DKAirCashFunctions.m */; };
+		DFA919201862B26E00A51C6A /* DSC02167.JPG in Resources */ = {isa = PBXBuildFile; fileRef = DFA918A31862B26E00A51C6A /* DSC02167.JPG */; };
+		DFA919211862B26E00A51C6A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFA918A41862B26E00A51C6A /* InfoPlist.strings */; };
+		DFA919221862B26E00A51C6A /* rasterPrinting.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918A61862B26E00A51C6A /* rasterPrinting.xib */; };
+		DFA919231862B26E00A51C6A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918A81862B26E00A51C6A /* ViewController.xib */; };
+		DFA919241862B26E00A51C6A /* IOS_SDK-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFA918AA1862B26E00A51C6A /* IOS_SDK-Info.plist */; };
+		DFA919251862B26E00A51C6A /* IOS_SDK_arm64_support-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFA918AC1862B26E00A51C6A /* IOS_SDK_arm64_support-Info.plist */; };
+		DFA919261862B26E00A51C6A /* IOS_SDKViewControllerDKAirCash.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918AE1862B26E00A51C6A /* IOS_SDKViewControllerDKAirCash.m */; };
+		DFA919271862B26E00A51C6A /* IOS_SDKViewControllerDKAirCash.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918AF1862B26E00A51C6A /* IOS_SDKViewControllerDKAirCash.xib */; };
+		DFA919281862B26E00A51C6A /* IOS_SDKViewControllerLineMode.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918B11862B26E00A51C6A /* IOS_SDKViewControllerLineMode.m */; };
+		DFA919291862B26E00A51C6A /* IOS_SDKViewControllerLineMode.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918B21862B26E00A51C6A /* IOS_SDKViewControllerLineMode.xib */; };
+		DFA9192A1862B26E00A51C6A /* IOS_SDKViewControllerPortable.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918B41862B26E00A51C6A /* IOS_SDKViewControllerPortable.m */; };
+		DFA9192B1862B26E00A51C6A /* IOS_SDKViewControllerPortable.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918B51862B26E00A51C6A /* IOS_SDKViewControllerPortable.xib */; };
+		DFA9192C1862B26E00A51C6A /* IOS_SDKViewControllerRasterMode.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918B71862B26E00A51C6A /* IOS_SDKViewControllerRasterMode.m */; };
+		DFA9192D1862B26E00A51C6A /* IOS_SDKViewControllerRasterMode.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918B81862B26E00A51C6A /* IOS_SDKViewControllerRasterMode.xib */; };
+		DFA9192E1862B26E00A51C6A /* itf.gif in Resources */ = {isa = PBXBuildFile; fileRef = DFA918B91862B26E00A51C6A /* itf.gif */; };
+		DFA9192F1862B26E00A51C6A /* ITF.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918BB1862B26E00A51C6A /* ITF.m */; };
+		DFA919301862B26E00A51C6A /* ITF.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918BC1862B26E00A51C6A /* ITF.xib */; };
+		DFA919311862B26E00A51C6A /* JpKnjFormating.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918BE1862B26E00A51C6A /* JpKnjFormating.m */; };
+		DFA919321862B26E00A51C6A /* JpKnjFormating.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918BF1862B26E00A51C6A /* JpKnjFormating.xib */; };
+		DFA919331862B26E00A51C6A /* JpKnjFormatingMini.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918C11862B26E00A51C6A /* JpKnjFormatingMini.m */; };
+		DFA919341862B26E00A51C6A /* JpKnjFormatingMini.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918C21862B26E00A51C6A /* JpKnjFormatingMini.xib */; };
+		DFA919361862B26E00A51C6A /* MiniPrinterFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918C51862B26E00A51C6A /* MiniPrinterFunctions.m */; };
+		DFA919371862B26E00A51C6A /* pdf417.gif in Resources */ = {isa = PBXBuildFile; fileRef = DFA918C61862B26E00A51C6A /* pdf417.gif */; };
+		DFA919381862B26E00A51C6A /* PDF417.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918C81862B26E00A51C6A /* PDF417.m */; };
+		DFA919391862B26E00A51C6A /* PDF417.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918C91862B26E00A51C6A /* PDF417.xib */; };
+		DFA9193A1862B26E00A51C6A /* PDF417mini.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918CB1862B26E00A51C6A /* PDF417mini.m */; };
+		DFA9193B1862B26E00A51C6A /* PDF417mini.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918CC1862B26E00A51C6A /* PDF417mini.xib */; };
+		DFA9193C1862B26E00A51C6A /* POSPrinter_2013_02.JPG in Resources */ = {isa = PBXBuildFile; fileRef = DFA918CD1862B26E00A51C6A /* POSPrinter_2013_02.JPG */; };
+		DFA9193D1862B26E00A51C6A /* PrinterFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918CF1862B26E00A51C6A /* PrinterFunctions.m */; };
+		DFA9193E1862B26E00A51C6A /* qrcode.gif in Resources */ = {isa = PBXBuildFile; fileRef = DFA918D01862B26E00A51C6A /* qrcode.gif */; };
+		DFA9193F1862B26E00A51C6A /* QRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918D21862B26E00A51C6A /* QRCode.m */; };
+		DFA919401862B26E00A51C6A /* QRCode.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918D31862B26E00A51C6A /* QRCode.xib */; };
+		DFA919411862B26E00A51C6A /* QRCodeMini.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918D51862B26E00A51C6A /* QRCodeMini.m */; };
+		DFA919421862B26E00A51C6A /* QRCodeMini.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918D61862B26E00A51C6A /* QRCodeMini.xib */; };
+		DFA919431862B26E00A51C6A /* RasterDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918D81862B26E00A51C6A /* RasterDocument.m */; };
+		DFA919441862B26E00A51C6A /* rasterPrinting.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918DA1862B26E00A51C6A /* rasterPrinting.m */; };
+		DFA9194D1862B26E00A51C6A /* SearchPrinterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918E61862B26E00A51C6A /* SearchPrinterViewController.m */; };
+		DFA9194E1862B26E00A51C6A /* SearchPrinterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918E71862B26E00A51C6A /* SearchPrinterViewController.xib */; };
+		DFA9194F1862B26E00A51C6A /* StandardHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918E91862B26E00A51C6A /* StandardHelp.m */; };
+		DFA919501862B26E00A51C6A /* StandardHelp.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918EA1862B26E00A51C6A /* StandardHelp.xib */; };
+		DFA919511862B26E00A51C6A /* StarBitmap.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918EC1862B26E00A51C6A /* StarBitmap.m */; };
+		DFA919521862B26E00A51C6A /* TextFormating.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918EE1862B26E00A51C6A /* TextFormating.m */; };
+		DFA919531862B26E00A51C6A /* TextFormating.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918EF1862B26E00A51C6A /* TextFormating.xib */; };
+		DFA919541862B26E00A51C6A /* TextFormatingMini.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918F11862B26E00A51C6A /* TextFormatingMini.m */; };
+		DFA919551862B26E00A51C6A /* TextFormatingMini.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918F21862B26E00A51C6A /* TextFormatingMini.xib */; };
+		DFA919561862B26E00A51C6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918F41862B26E00A51C6A /* ViewController.m */; };
+		DFA919571862B26E00A51C6A /* ViewControllerAboutLineMode.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918F61862B26E00A51C6A /* ViewControllerAboutLineMode.m */; };
+		DFA919581862B26E00A51C6A /* ViewControllerAboutLineMode.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918F71862B26E00A51C6A /* ViewControllerAboutLineMode.xib */; };
+		DFA919591862B26E00A51C6A /* ViewControllerAboutRasterMode.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918F91862B26E00A51C6A /* ViewControllerAboutRasterMode.m */; };
+		DFA9195A1862B26E00A51C6A /* ViewControllerAboutRasterMode.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918FA1862B26E00A51C6A /* ViewControllerAboutRasterMode.xib */; };
+		DFA9195B1862B26E00A51C6A /* ViewControllerEx.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA918FC1862B26E00A51C6A /* ViewControllerEx.m */; };
+		DFA9195C1862B26E00A51C6A /* ViewControllerEx.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA918FD1862B26E00A51C6A /* ViewControllerEx.xib */; };
+		DFA9195D1862B26E00A51C6A /* JpKnjFormatingMini~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA919001862B26E00A51C6A /* JpKnjFormatingMini~ipad.xib */; };
+		DFA9195E1862B26E00A51C6A /* JpKnjFormating~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA919011862B26E00A51C6A /* JpKnjFormating~ipad.xib */; };
+		DFA9195F1862B26E00A51C6A /* rasterPrinting~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA919021862B26E00A51C6A /* rasterPrinting~ipad.xib */; };
+		DFA919601862B26E00A51C6A /* TextFormatingMini~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA919031862B26E00A51C6A /* TextFormatingMini~ipad.xib */; };
+		DFA919611862B26E00A51C6A /* TextFormating~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA919041862B26E00A51C6A /* TextFormating~ipad.xib */; };
+		DFA9738D187403AA0012D099 /* catering.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA9738C187403AA0012D099 /* catering.png */; };
+		DFA97390187405800012D099 /* light-off3.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA9738E187405800012D099 /* light-off3.png */; };
+		DFA97391187405800012D099 /* light-on3.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA9738F187405800012D099 /* light-on3.png */; };
+		DFA973A218740D580012D099 /* GMGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA9739518740D580012D099 /* GMGridView.m */; };
+		DFA973A318740D580012D099 /* GMGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA9739B18740D580012D099 /* GMGridViewCell.m */; };
+		DFA973A418740D580012D099 /* GMGridViewLayoutStrategies.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA9739D18740D580012D099 /* GMGridViewLayoutStrategies.m */; };
+		DFA973A518740D580012D099 /* UIGestureRecognizer+GMGridViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA9739F18740D580012D099 /* UIGestureRecognizer+GMGridViewAdditions.m */; };
+		DFA973A618740D580012D099 /* UIView+GMGridViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA973A118740D580012D099 /* UIView+GMGridViewAdditions.m */; };
+		DFA973AC18740DAA0012D099 /* close_x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA973AB18740DAA0012D099 /* close_x.png */; };
+		DFA9E77818728FA600035715 /* order-row-red.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA9E77518728FA600035715 /* order-row-red.png */; };
+		DFA9E77918728FA600035715 /* order-row-drkgreen.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA9E77618728FA600035715 /* order-row-drkgreen.png */; };
+		DFA9E77A18728FA600035715 /* order-row-lghtgreen.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA9E77718728FA600035715 /* order-row-lghtgreen.png */; };
+		DFAE5B951862AFE40021FC16 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFAE5B941862AFE40021FC16 /* ExternalAccessory.framework */; };
+		DFAE5B971862B0030021FC16 /* StarIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFAE5B961862B0030021FC16 /* StarIO.framework */; };
 		DFB7DC9D1695AF07000DFD2A /* GetiRestaurantsCatsubIteam.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB7DC9C1695AF07000DFD2A /* GetiRestaurantsCatsubIteam.m */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +214,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = DF522BA71679FE1A0032BFAA;
 			remoteInfo = "iRestaurants Universal";
+		};
+		DFA973A818740D580012D099 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFA9739618740D580012D099 /* GMGridView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 78509312149FAC2E000787E4;
+			remoteInfo = GMGridView;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -154,6 +266,7 @@
 		DF32A521168083200055242A /* all-orders.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all-orders.png"; sourceTree = "<group>"; };
 		DF35CCB5168C440B00F926E2 /* allordertable-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "allordertable-bg.png"; sourceTree = "<group>"; };
 		DF35CCB8168C450C00F926E2 /* heading-top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heading-top.png"; sourceTree = "<group>"; };
+		DF38AD1618683F6C0095D74B /* PrinterSetting-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PrinterSetting-icon.png"; sourceTree = "<group>"; };
 		DF3B43C41685A9F300FD39E5 /* submit-order.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "submit-order.png"; sourceTree = "<group>"; };
 		DF3B43C71685AB7E00FD39E5 /* product-row.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "product-row.png"; sourceTree = "<group>"; };
 		DF4DAEC7168AED2B001010EC /* clear-table-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clear-table-button.png"; sourceTree = "<group>"; };
@@ -217,6 +330,161 @@
 		DF9A82FC16BFE0500055744E /* prnding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prnding.png; sourceTree = "<group>"; };
 		DF9A830116BFE8050055744E /* poup1024x768.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poup1024x768.png; sourceTree = "<group>"; };
 		DF9A830516BFED3F0055744E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DFA676AC187529EA00A7799E /* Demo1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo1ViewController.h; sourceTree = "<group>"; };
+		DFA676AE187529EA00A7799E /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
+		DFA676AF187529EA00A7799E /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
+		DFA676B218752AE100A7799E /* Demo1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo1ViewController.m; sourceTree = "<group>"; };
+		DFA676B41875410700A7799E /* blue-table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-table.png"; sourceTree = "<group>"; };
+		DFA676B51875410700A7799E /* red-table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-table.png"; sourceTree = "<group>"; };
+		DFA676B8187562BD00A7799E /* red-table1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-table1.png"; sourceTree = "<group>"; };
+		DFA676BA187566AE00A7799E /* blue-table1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-table1.png"; sourceTree = "<group>"; };
+		DFA6CF371869892900E43B03 /* order-row-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "order-row-selected.png"; sourceTree = "<group>"; };
+		DFA918791862B26E00A51C6A /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		DFA9187A1862B26E00A51C6A /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		DFA9187B1862B26E00A51C6A /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		DFA9187C1862B26E00A51C6A /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		DFA9187D1862B26E00A51C6A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DFA9187E1862B26E00A51C6A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DFA9187F1862B26E00A51C6A /* BarcodePrintingMini.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarcodePrintingMini.h; sourceTree = "<group>"; };
+		DFA918801862B26E00A51C6A /* BarcodePrintingMini.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarcodePrintingMini.m; sourceTree = "<group>"; };
+		DFA918811862B26E00A51C6A /* BarcodePrintingMini.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarcodePrintingMini.xib; sourceTree = "<group>"; };
+		DFA918821862B26E00A51C6A /* BarcodeSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarcodeSelector.h; sourceTree = "<group>"; };
+		DFA918831862B26E00A51C6A /* BarcodeSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarcodeSelector.m; sourceTree = "<group>"; };
+		DFA918841862B26E00A51C6A /* BarcodeSelector.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarcodeSelector.xib; sourceTree = "<group>"; };
+		DFA918851862B26E00A51C6A /* BarcodeSelector2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarcodeSelector2D.h; sourceTree = "<group>"; };
+		DFA918861862B26E00A51C6A /* BarcodeSelector2D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarcodeSelector2D.m; sourceTree = "<group>"; };
+		DFA918871862B26E00A51C6A /* BluetoothSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothSettingViewController.h; sourceTree = "<group>"; };
+		DFA918881862B26E00A51C6A /* BluetoothSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothSettingViewController.m; sourceTree = "<group>"; };
+		DFA918891862B26E00A51C6A /* BluetoothSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BluetoothSettingViewController.xib; sourceTree = "<group>"; };
+		DFA9188A1862B26E00A51C6A /* CheckConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckConnectionViewController.h; sourceTree = "<group>"; };
+		DFA9188B1862B26E00A51C6A /* CheckConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckConnectionViewController.m; sourceTree = "<group>"; };
+		DFA9188C1862B26E00A51C6A /* CheckConnectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckConnectionViewController.xib; sourceTree = "<group>"; };
+		DFA9188D1862B26E00A51C6A /* code128.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = code128.gif; sourceTree = "<group>"; };
+		DFA9188E1862B26E00A51C6A /* code128.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = code128.h; sourceTree = "<group>"; };
+		DFA9188F1862B26E00A51C6A /* code128.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = code128.m; sourceTree = "<group>"; };
+		DFA918901862B26E00A51C6A /* code128.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = code128.xib; sourceTree = "<group>"; };
+		DFA918911862B26E00A51C6A /* code39.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = code39.gif; sourceTree = "<group>"; };
+		DFA918921862B26E00A51C6A /* code39.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = code39.h; sourceTree = "<group>"; };
+		DFA918931862B26E00A51C6A /* code39.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = code39.m; sourceTree = "<group>"; };
+		DFA918941862B26E00A51C6A /* code39.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = code39.xib; sourceTree = "<group>"; };
+		DFA918951862B26E00A51C6A /* code93.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = code93.gif; sourceTree = "<group>"; };
+		DFA918961862B26E00A51C6A /* code93.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = code93.h; sourceTree = "<group>"; };
+		DFA918971862B26E00A51C6A /* code93.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = code93.m; sourceTree = "<group>"; };
+		DFA918981862B26E00A51C6A /* code93.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = code93.xib; sourceTree = "<group>"; };
+		DFA918991862B26E00A51C6A /* CommonEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonEnum.h; sourceTree = "<group>"; };
+		DFA9189A1862B26E00A51C6A /* CommonTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTableView.h; sourceTree = "<group>"; };
+		DFA9189B1862B26E00A51C6A /* CommonTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTableView.m; sourceTree = "<group>"; };
+		DFA9189C1862B26E00A51C6A /* CommonTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonTableView.xib; sourceTree = "<group>"; };
+		DFA9189D1862B26E00A51C6A /* Cut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cut.h; sourceTree = "<group>"; };
+		DFA9189E1862B26E00A51C6A /* Cut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cut.m; sourceTree = "<group>"; };
+		DFA9189F1862B26E00A51C6A /* Cut.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cut.xib; sourceTree = "<group>"; };
+		DFA918A11862B26E00A51C6A /* DKAirCashFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAirCashFunctions.h; sourceTree = "<group>"; };
+		DFA918A21862B26E00A51C6A /* DKAirCashFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAirCashFunctions.m; sourceTree = "<group>"; };
+		DFA918A31862B26E00A51C6A /* DSC02167.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DSC02167.JPG; sourceTree = "<group>"; };
+		DFA918A51862B26E00A51C6A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DFA918A71862B26E00A51C6A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/rasterPrinting.xib; sourceTree = "<group>"; };
+		DFA918A91862B26E00A51C6A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		DFA918AA1862B26E00A51C6A /* IOS_SDK-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "IOS_SDK-Info.plist"; sourceTree = "<group>"; };
+		DFA918AB1862B26E00A51C6A /* IOS_SDK-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IOS_SDK-Prefix.pch"; sourceTree = "<group>"; };
+		DFA918AC1862B26E00A51C6A /* IOS_SDK_arm64_support-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "IOS_SDK_arm64_support-Info.plist"; sourceTree = "<group>"; };
+		DFA918AD1862B26E00A51C6A /* IOS_SDKViewControllerDKAirCash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOS_SDKViewControllerDKAirCash.h; sourceTree = "<group>"; };
+		DFA918AE1862B26E00A51C6A /* IOS_SDKViewControllerDKAirCash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOS_SDKViewControllerDKAirCash.m; sourceTree = "<group>"; };
+		DFA918AF1862B26E00A51C6A /* IOS_SDKViewControllerDKAirCash.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IOS_SDKViewControllerDKAirCash.xib; sourceTree = "<group>"; };
+		DFA918B01862B26E00A51C6A /* IOS_SDKViewControllerLineMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOS_SDKViewControllerLineMode.h; sourceTree = "<group>"; };
+		DFA918B11862B26E00A51C6A /* IOS_SDKViewControllerLineMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOS_SDKViewControllerLineMode.m; sourceTree = "<group>"; };
+		DFA918B21862B26E00A51C6A /* IOS_SDKViewControllerLineMode.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IOS_SDKViewControllerLineMode.xib; sourceTree = "<group>"; };
+		DFA918B31862B26E00A51C6A /* IOS_SDKViewControllerPortable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOS_SDKViewControllerPortable.h; sourceTree = "<group>"; };
+		DFA918B41862B26E00A51C6A /* IOS_SDKViewControllerPortable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOS_SDKViewControllerPortable.m; sourceTree = "<group>"; };
+		DFA918B51862B26E00A51C6A /* IOS_SDKViewControllerPortable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IOS_SDKViewControllerPortable.xib; sourceTree = "<group>"; };
+		DFA918B61862B26E00A51C6A /* IOS_SDKViewControllerRasterMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOS_SDKViewControllerRasterMode.h; sourceTree = "<group>"; };
+		DFA918B71862B26E00A51C6A /* IOS_SDKViewControllerRasterMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOS_SDKViewControllerRasterMode.m; sourceTree = "<group>"; };
+		DFA918B81862B26E00A51C6A /* IOS_SDKViewControllerRasterMode.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IOS_SDKViewControllerRasterMode.xib; sourceTree = "<group>"; };
+		DFA918B91862B26E00A51C6A /* itf.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = itf.gif; sourceTree = "<group>"; };
+		DFA918BA1862B26E00A51C6A /* ITF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITF.h; sourceTree = "<group>"; };
+		DFA918BB1862B26E00A51C6A /* ITF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITF.m; sourceTree = "<group>"; };
+		DFA918BC1862B26E00A51C6A /* ITF.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ITF.xib; sourceTree = "<group>"; };
+		DFA918BD1862B26E00A51C6A /* JpKnjFormating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JpKnjFormating.h; sourceTree = "<group>"; };
+		DFA918BE1862B26E00A51C6A /* JpKnjFormating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JpKnjFormating.m; sourceTree = "<group>"; };
+		DFA918BF1862B26E00A51C6A /* JpKnjFormating.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JpKnjFormating.xib; sourceTree = "<group>"; };
+		DFA918C01862B26E00A51C6A /* JpKnjFormatingMini.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JpKnjFormatingMini.h; sourceTree = "<group>"; };
+		DFA918C11862B26E00A51C6A /* JpKnjFormatingMini.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JpKnjFormatingMini.m; sourceTree = "<group>"; };
+		DFA918C21862B26E00A51C6A /* JpKnjFormatingMini.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JpKnjFormatingMini.xib; sourceTree = "<group>"; };
+		DFA918C41862B26E00A51C6A /* MiniPrinterFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiniPrinterFunctions.h; sourceTree = "<group>"; };
+		DFA918C51862B26E00A51C6A /* MiniPrinterFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiniPrinterFunctions.m; sourceTree = "<group>"; };
+		DFA918C61862B26E00A51C6A /* pdf417.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pdf417.gif; sourceTree = "<group>"; };
+		DFA918C71862B26E00A51C6A /* PDF417.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDF417.h; sourceTree = "<group>"; };
+		DFA918C81862B26E00A51C6A /* PDF417.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDF417.m; sourceTree = "<group>"; };
+		DFA918C91862B26E00A51C6A /* PDF417.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDF417.xib; sourceTree = "<group>"; };
+		DFA918CA1862B26E00A51C6A /* PDF417mini.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDF417mini.h; sourceTree = "<group>"; };
+		DFA918CB1862B26E00A51C6A /* PDF417mini.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDF417mini.m; sourceTree = "<group>"; };
+		DFA918CC1862B26E00A51C6A /* PDF417mini.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDF417mini.xib; sourceTree = "<group>"; };
+		DFA918CD1862B26E00A51C6A /* POSPrinter_2013_02.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = POSPrinter_2013_02.JPG; sourceTree = "<group>"; };
+		DFA918CE1862B26E00A51C6A /* PrinterFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrinterFunctions.h; sourceTree = "<group>"; };
+		DFA918CF1862B26E00A51C6A /* PrinterFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrinterFunctions.m; sourceTree = "<group>"; };
+		DFA918D01862B26E00A51C6A /* qrcode.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = qrcode.gif; sourceTree = "<group>"; };
+		DFA918D11862B26E00A51C6A /* QRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCode.h; sourceTree = "<group>"; };
+		DFA918D21862B26E00A51C6A /* QRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCode.m; sourceTree = "<group>"; };
+		DFA918D31862B26E00A51C6A /* QRCode.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCode.xib; sourceTree = "<group>"; };
+		DFA918D41862B26E00A51C6A /* QRCodeMini.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeMini.h; sourceTree = "<group>"; };
+		DFA918D51862B26E00A51C6A /* QRCodeMini.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeMini.m; sourceTree = "<group>"; };
+		DFA918D61862B26E00A51C6A /* QRCodeMini.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeMini.xib; sourceTree = "<group>"; };
+		DFA918D71862B26E00A51C6A /* RasterDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RasterDocument.h; sourceTree = "<group>"; };
+		DFA918D81862B26E00A51C6A /* RasterDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RasterDocument.m; sourceTree = "<group>"; };
+		DFA918D91862B26E00A51C6A /* rasterPrinting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rasterPrinting.h; sourceTree = "<group>"; };
+		DFA918DA1862B26E00A51C6A /* rasterPrinting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rasterPrinting.m; sourceTree = "<group>"; };
+		DFA918E41862B26E00A51C6A /* ReturnSelectedCellText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReturnSelectedCellText.h; sourceTree = "<group>"; };
+		DFA918E51862B26E00A51C6A /* SearchPrinterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPrinterViewController.h; sourceTree = "<group>"; };
+		DFA918E61862B26E00A51C6A /* SearchPrinterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchPrinterViewController.m; sourceTree = "<group>"; };
+		DFA918E71862B26E00A51C6A /* SearchPrinterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchPrinterViewController.xib; sourceTree = "<group>"; };
+		DFA918E81862B26E00A51C6A /* StandardHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardHelp.h; sourceTree = "<group>"; };
+		DFA918E91862B26E00A51C6A /* StandardHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandardHelp.m; sourceTree = "<group>"; };
+		DFA918EA1862B26E00A51C6A /* StandardHelp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StandardHelp.xib; sourceTree = "<group>"; };
+		DFA918EB1862B26E00A51C6A /* StarBitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarBitmap.h; sourceTree = "<group>"; };
+		DFA918EC1862B26E00A51C6A /* StarBitmap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarBitmap.m; sourceTree = "<group>"; };
+		DFA918ED1862B26E00A51C6A /* TextFormating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFormating.h; sourceTree = "<group>"; };
+		DFA918EE1862B26E00A51C6A /* TextFormating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFormating.m; sourceTree = "<group>"; };
+		DFA918EF1862B26E00A51C6A /* TextFormating.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFormating.xib; sourceTree = "<group>"; };
+		DFA918F01862B26E00A51C6A /* TextFormatingMini.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFormatingMini.h; sourceTree = "<group>"; };
+		DFA918F11862B26E00A51C6A /* TextFormatingMini.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFormatingMini.m; sourceTree = "<group>"; };
+		DFA918F21862B26E00A51C6A /* TextFormatingMini.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFormatingMini.xib; sourceTree = "<group>"; };
+		DFA918F31862B26E00A51C6A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DFA918F41862B26E00A51C6A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DFA918F51862B26E00A51C6A /* ViewControllerAboutLineMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerAboutLineMode.h; sourceTree = "<group>"; };
+		DFA918F61862B26E00A51C6A /* ViewControllerAboutLineMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerAboutLineMode.m; sourceTree = "<group>"; };
+		DFA918F71862B26E00A51C6A /* ViewControllerAboutLineMode.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewControllerAboutLineMode.xib; sourceTree = "<group>"; };
+		DFA918F81862B26E00A51C6A /* ViewControllerAboutRasterMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerAboutRasterMode.h; sourceTree = "<group>"; };
+		DFA918F91862B26E00A51C6A /* ViewControllerAboutRasterMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerAboutRasterMode.m; sourceTree = "<group>"; };
+		DFA918FA1862B26E00A51C6A /* ViewControllerAboutRasterMode.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewControllerAboutRasterMode.xib; sourceTree = "<group>"; };
+		DFA918FB1862B26E00A51C6A /* ViewControllerEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerEx.h; sourceTree = "<group>"; };
+		DFA918FC1862B26E00A51C6A /* ViewControllerEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerEx.m; sourceTree = "<group>"; };
+		DFA918FD1862B26E00A51C6A /* ViewControllerEx.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewControllerEx.xib; sourceTree = "<group>"; };
+		DFA919001862B26E00A51C6A /* JpKnjFormatingMini~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "JpKnjFormatingMini~ipad.xib"; sourceTree = "<group>"; };
+		DFA919011862B26E00A51C6A /* JpKnjFormating~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "JpKnjFormating~ipad.xib"; sourceTree = "<group>"; };
+		DFA919021862B26E00A51C6A /* rasterPrinting~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "rasterPrinting~ipad.xib"; sourceTree = "<group>"; };
+		DFA919031862B26E00A51C6A /* TextFormatingMini~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "TextFormatingMini~ipad.xib"; sourceTree = "<group>"; };
+		DFA919041862B26E00A51C6A /* TextFormating~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "TextFormating~ipad.xib"; sourceTree = "<group>"; };
+		DFA9738C187403AA0012D099 /* catering.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = catering.png; sourceTree = "<group>"; };
+		DFA9738E187405800012D099 /* light-off3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light-off3.png"; sourceTree = "<group>"; };
+		DFA9738F187405800012D099 /* light-on3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light-on3.png"; sourceTree = "<group>"; };
+		DFA9739318740D580012D099 /* GMGridView-Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMGridView-Constants.h"; sourceTree = "<group>"; };
+		DFA9739418740D580012D099 /* GMGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGridView.h; sourceTree = "<group>"; };
+		DFA9739518740D580012D099 /* GMGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGridView.m; sourceTree = "<group>"; };
+		DFA9739618740D580012D099 /* GMGridView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = GMGridView.xcodeproj; sourceTree = "<group>"; };
+		DFA9739918740D580012D099 /* GMGridViewCell+Extended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMGridViewCell+Extended.h"; sourceTree = "<group>"; };
+		DFA9739A18740D580012D099 /* GMGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGridViewCell.h; sourceTree = "<group>"; };
+		DFA9739B18740D580012D099 /* GMGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGridViewCell.m; sourceTree = "<group>"; };
+		DFA9739C18740D580012D099 /* GMGridViewLayoutStrategies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGridViewLayoutStrategies.h; sourceTree = "<group>"; };
+		DFA9739D18740D580012D099 /* GMGridViewLayoutStrategies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGridViewLayoutStrategies.m; sourceTree = "<group>"; };
+		DFA9739E18740D580012D099 /* UIGestureRecognizer+GMGridViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+GMGridViewAdditions.h"; sourceTree = "<group>"; };
+		DFA9739F18740D580012D099 /* UIGestureRecognizer+GMGridViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+GMGridViewAdditions.m"; sourceTree = "<group>"; };
+		DFA973A018740D580012D099 /* UIView+GMGridViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GMGridViewAdditions.h"; sourceTree = "<group>"; };
+		DFA973A118740D580012D099 /* UIView+GMGridViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GMGridViewAdditions.m"; sourceTree = "<group>"; };
+		DFA973AB18740DAA0012D099 /* close_x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_x.png; sourceTree = "<group>"; };
+		DFA9E77518728FA600035715 /* order-row-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "order-row-red.png"; sourceTree = "<group>"; };
+		DFA9E77618728FA600035715 /* order-row-drkgreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "order-row-drkgreen.png"; sourceTree = "<group>"; };
+		DFA9E77718728FA600035715 /* order-row-lghtgreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "order-row-lghtgreen.png"; sourceTree = "<group>"; };
+		DFAE5B941862AFE40021FC16 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		DFAE5B961862B0030021FC16 /* StarIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StarIO.framework; path = "../../Downloads/StarIO_iOS_SDK_V390 2/Distributables/StarIO.framework"; sourceTree = "<group>"; };
 		DFB7DC9B1695AF07000DFD2A /* GetiRestaurantsCatsubIteam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetiRestaurantsCatsubIteam.h; sourceTree = "<group>"; };
 		DFB7DC9C1695AF07000DFD2A /* GetiRestaurantsCatsubIteam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetiRestaurantsCatsubIteam.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -226,6 +494,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFAE5B971862B0030021FC16 /* StarIO.framework in Frameworks */,
+				DFAE5B951862AFE40021FC16 /* ExternalAccessory.framework in Frameworks */,
 				DF9A830616BFED3F0055744E /* QuartzCore.framework in Frameworks */,
 				DF522BAD1679FE1A0032BFAA /* UIKit.framework in Frameworks */,
 				DF522BAF1679FE1A0032BFAA /* Foundation.framework in Frameworks */,
@@ -283,7 +553,6 @@
 		DF522B9D1679FE1A0032BFAA = {
 			isa = PBXGroup;
 			children = (
-				DF9A830516BFED3F0055744E /* QuartzCore.framework */,
 				DF522BB21679FE1A0032BFAA /* iRestaurants Universal */,
 				DF522BD01679FE1B0032BFAA /* iRestaurants UniversalTests */,
 				DF522BAB1679FE1A0032BFAA /* Frameworks */,
@@ -303,6 +572,10 @@
 		DF522BAB1679FE1A0032BFAA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DFA9739218740D580012D099 /* GMGridView */,
+				DF9A830516BFED3F0055744E /* QuartzCore.framework */,
+				DFAE5B961862B0030021FC16 /* StarIO.framework */,
+				DFAE5B941862AFE40021FC16 /* ExternalAccessory.framework */,
 				DF522BAC1679FE1A0032BFAA /* UIKit.framework */,
 				DF522BAE1679FE1A0032BFAA /* Foundation.framework */,
 				DF522BB01679FE1A0032BFAA /* CoreGraphics.framework */,
@@ -314,6 +587,9 @@
 		DF522BB21679FE1A0032BFAA /* iRestaurants Universal */ = {
 			isa = PBXGroup;
 			children = (
+				DFA973AA18740D690012D099 /* GridView Class */,
+				DFA918781862B26E00A51C6A /* IOS_SDK */,
+				DFA918FE1862B26E00A51C6A /* Resources-iPad */,
 				DF0E70C0169815A900D2491D /* GetServiceClass */,
 				DF522BF2167A03C90032BFAA /* Resources */,
 				DF522BEF167A039A0032BFAA /* AppClass */,
@@ -386,6 +662,14 @@
 		DF522BF2167A03C90032BFAA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DFA9738E187405800012D099 /* light-off3.png */,
+				DFA9738F187405800012D099 /* light-on3.png */,
+				DFA9738C187403AA0012D099 /* catering.png */,
+				DFA9E77518728FA600035715 /* order-row-red.png */,
+				DFA9E77618728FA600035715 /* order-row-drkgreen.png */,
+				DFA9E77718728FA600035715 /* order-row-lghtgreen.png */,
+				DFA6CF371869892900E43B03 /* order-row-selected.png */,
+				DF38AD1618683F6C0095D74B /* PrinterSetting-icon.png */,
 				DF2B6E8116DF7B3600C0C80E /* icon.png */,
 				DF2B6E7F16DF6CF800C0C80E /* Default-Landscape.png */,
 				DF72F717168327C0001659DC /* iRestaurants Universal.entitlements */,
@@ -470,6 +754,196 @@
 			name = "Place New order Class";
 			sourceTree = "<group>";
 		};
+		DFA918781862B26E00A51C6A /* IOS_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				DFA918791862B26E00A51C6A /* AbstractActionSheetPicker.h */,
+				DFA9187A1862B26E00A51C6A /* AbstractActionSheetPicker.m */,
+				DFA9187B1862B26E00A51C6A /* ActionSheetStringPicker.h */,
+				DFA9187C1862B26E00A51C6A /* ActionSheetStringPicker.m */,
+				DFA9187D1862B26E00A51C6A /* AppDelegate.h */,
+				DFA9187E1862B26E00A51C6A /* AppDelegate.m */,
+				DFA9187F1862B26E00A51C6A /* BarcodePrintingMini.h */,
+				DFA918801862B26E00A51C6A /* BarcodePrintingMini.m */,
+				DFA918811862B26E00A51C6A /* BarcodePrintingMini.xib */,
+				DFA918821862B26E00A51C6A /* BarcodeSelector.h */,
+				DFA918831862B26E00A51C6A /* BarcodeSelector.m */,
+				DFA918841862B26E00A51C6A /* BarcodeSelector.xib */,
+				DFA918851862B26E00A51C6A /* BarcodeSelector2D.h */,
+				DFA918861862B26E00A51C6A /* BarcodeSelector2D.m */,
+				DFA918871862B26E00A51C6A /* BluetoothSettingViewController.h */,
+				DFA918881862B26E00A51C6A /* BluetoothSettingViewController.m */,
+				DFA918891862B26E00A51C6A /* BluetoothSettingViewController.xib */,
+				DFA9188A1862B26E00A51C6A /* CheckConnectionViewController.h */,
+				DFA9188B1862B26E00A51C6A /* CheckConnectionViewController.m */,
+				DFA9188C1862B26E00A51C6A /* CheckConnectionViewController.xib */,
+				DFA9188D1862B26E00A51C6A /* code128.gif */,
+				DFA9188E1862B26E00A51C6A /* code128.h */,
+				DFA9188F1862B26E00A51C6A /* code128.m */,
+				DFA918901862B26E00A51C6A /* code128.xib */,
+				DFA918911862B26E00A51C6A /* code39.gif */,
+				DFA918921862B26E00A51C6A /* code39.h */,
+				DFA918931862B26E00A51C6A /* code39.m */,
+				DFA918941862B26E00A51C6A /* code39.xib */,
+				DFA918951862B26E00A51C6A /* code93.gif */,
+				DFA918961862B26E00A51C6A /* code93.h */,
+				DFA918971862B26E00A51C6A /* code93.m */,
+				DFA918981862B26E00A51C6A /* code93.xib */,
+				DFA918991862B26E00A51C6A /* CommonEnum.h */,
+				DFA9189A1862B26E00A51C6A /* CommonTableView.h */,
+				DFA9189B1862B26E00A51C6A /* CommonTableView.m */,
+				DFA9189C1862B26E00A51C6A /* CommonTableView.xib */,
+				DFA9189D1862B26E00A51C6A /* Cut.h */,
+				DFA9189E1862B26E00A51C6A /* Cut.m */,
+				DFA9189F1862B26E00A51C6A /* Cut.xib */,
+				DFA918A11862B26E00A51C6A /* DKAirCashFunctions.h */,
+				DFA918A21862B26E00A51C6A /* DKAirCashFunctions.m */,
+				DFA918A31862B26E00A51C6A /* DSC02167.JPG */,
+				DFA918A41862B26E00A51C6A /* InfoPlist.strings */,
+				DFA918A61862B26E00A51C6A /* rasterPrinting.xib */,
+				DFA918A81862B26E00A51C6A /* ViewController.xib */,
+				DFA918AA1862B26E00A51C6A /* IOS_SDK-Info.plist */,
+				DFA918AB1862B26E00A51C6A /* IOS_SDK-Prefix.pch */,
+				DFA918AC1862B26E00A51C6A /* IOS_SDK_arm64_support-Info.plist */,
+				DFA918AD1862B26E00A51C6A /* IOS_SDKViewControllerDKAirCash.h */,
+				DFA918AE1862B26E00A51C6A /* IOS_SDKViewControllerDKAirCash.m */,
+				DFA918AF1862B26E00A51C6A /* IOS_SDKViewControllerDKAirCash.xib */,
+				DFA918B01862B26E00A51C6A /* IOS_SDKViewControllerLineMode.h */,
+				DFA918B11862B26E00A51C6A /* IOS_SDKViewControllerLineMode.m */,
+				DFA918B21862B26E00A51C6A /* IOS_SDKViewControllerLineMode.xib */,
+				DFA918B31862B26E00A51C6A /* IOS_SDKViewControllerPortable.h */,
+				DFA918B41862B26E00A51C6A /* IOS_SDKViewControllerPortable.m */,
+				DFA918B51862B26E00A51C6A /* IOS_SDKViewControllerPortable.xib */,
+				DFA918B61862B26E00A51C6A /* IOS_SDKViewControllerRasterMode.h */,
+				DFA918B71862B26E00A51C6A /* IOS_SDKViewControllerRasterMode.m */,
+				DFA918B81862B26E00A51C6A /* IOS_SDKViewControllerRasterMode.xib */,
+				DFA918B91862B26E00A51C6A /* itf.gif */,
+				DFA918BA1862B26E00A51C6A /* ITF.h */,
+				DFA918BB1862B26E00A51C6A /* ITF.m */,
+				DFA918BC1862B26E00A51C6A /* ITF.xib */,
+				DFA918BD1862B26E00A51C6A /* JpKnjFormating.h */,
+				DFA918BE1862B26E00A51C6A /* JpKnjFormating.m */,
+				DFA918BF1862B26E00A51C6A /* JpKnjFormating.xib */,
+				DFA918C01862B26E00A51C6A /* JpKnjFormatingMini.h */,
+				DFA918C11862B26E00A51C6A /* JpKnjFormatingMini.m */,
+				DFA918C21862B26E00A51C6A /* JpKnjFormatingMini.xib */,
+				DFA918C41862B26E00A51C6A /* MiniPrinterFunctions.h */,
+				DFA918C51862B26E00A51C6A /* MiniPrinterFunctions.m */,
+				DFA918C61862B26E00A51C6A /* pdf417.gif */,
+				DFA918C71862B26E00A51C6A /* PDF417.h */,
+				DFA918C81862B26E00A51C6A /* PDF417.m */,
+				DFA918C91862B26E00A51C6A /* PDF417.xib */,
+				DFA918CA1862B26E00A51C6A /* PDF417mini.h */,
+				DFA918CB1862B26E00A51C6A /* PDF417mini.m */,
+				DFA918CC1862B26E00A51C6A /* PDF417mini.xib */,
+				DFA918CD1862B26E00A51C6A /* POSPrinter_2013_02.JPG */,
+				DFA918CE1862B26E00A51C6A /* PrinterFunctions.h */,
+				DFA918CF1862B26E00A51C6A /* PrinterFunctions.m */,
+				DFA918D01862B26E00A51C6A /* qrcode.gif */,
+				DFA918D11862B26E00A51C6A /* QRCode.h */,
+				DFA918D21862B26E00A51C6A /* QRCode.m */,
+				DFA918D31862B26E00A51C6A /* QRCode.xib */,
+				DFA918D41862B26E00A51C6A /* QRCodeMini.h */,
+				DFA918D51862B26E00A51C6A /* QRCodeMini.m */,
+				DFA918D61862B26E00A51C6A /* QRCodeMini.xib */,
+				DFA918D71862B26E00A51C6A /* RasterDocument.h */,
+				DFA918D81862B26E00A51C6A /* RasterDocument.m */,
+				DFA918D91862B26E00A51C6A /* rasterPrinting.h */,
+				DFA918DA1862B26E00A51C6A /* rasterPrinting.m */,
+				DFA918E41862B26E00A51C6A /* ReturnSelectedCellText.h */,
+				DFA918E51862B26E00A51C6A /* SearchPrinterViewController.h */,
+				DFA918E61862B26E00A51C6A /* SearchPrinterViewController.m */,
+				DFA918E71862B26E00A51C6A /* SearchPrinterViewController.xib */,
+				DFA918E81862B26E00A51C6A /* StandardHelp.h */,
+				DFA918E91862B26E00A51C6A /* StandardHelp.m */,
+				DFA918EA1862B26E00A51C6A /* StandardHelp.xib */,
+				DFA918EB1862B26E00A51C6A /* StarBitmap.h */,
+				DFA918EC1862B26E00A51C6A /* StarBitmap.m */,
+				DFA918ED1862B26E00A51C6A /* TextFormating.h */,
+				DFA918EE1862B26E00A51C6A /* TextFormating.m */,
+				DFA918EF1862B26E00A51C6A /* TextFormating.xib */,
+				DFA918F01862B26E00A51C6A /* TextFormatingMini.h */,
+				DFA918F11862B26E00A51C6A /* TextFormatingMini.m */,
+				DFA918F21862B26E00A51C6A /* TextFormatingMini.xib */,
+				DFA918F31862B26E00A51C6A /* ViewController.h */,
+				DFA918F41862B26E00A51C6A /* ViewController.m */,
+				DFA918F51862B26E00A51C6A /* ViewControllerAboutLineMode.h */,
+				DFA918F61862B26E00A51C6A /* ViewControllerAboutLineMode.m */,
+				DFA918F71862B26E00A51C6A /* ViewControllerAboutLineMode.xib */,
+				DFA918F81862B26E00A51C6A /* ViewControllerAboutRasterMode.h */,
+				DFA918F91862B26E00A51C6A /* ViewControllerAboutRasterMode.m */,
+				DFA918FA1862B26E00A51C6A /* ViewControllerAboutRasterMode.xib */,
+				DFA918FB1862B26E00A51C6A /* ViewControllerEx.h */,
+				DFA918FC1862B26E00A51C6A /* ViewControllerEx.m */,
+				DFA918FD1862B26E00A51C6A /* ViewControllerEx.xib */,
+			);
+			path = IOS_SDK;
+			sourceTree = "<group>";
+		};
+		DFA918FE1862B26E00A51C6A /* Resources-iPad */ = {
+			isa = PBXGroup;
+			children = (
+				DFA918FF1862B26E00A51C6A /* IOS_SDK */,
+			);
+			path = "Resources-iPad";
+			sourceTree = "<group>";
+		};
+		DFA918FF1862B26E00A51C6A /* IOS_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				DFA919001862B26E00A51C6A /* JpKnjFormatingMini~ipad.xib */,
+				DFA919011862B26E00A51C6A /* JpKnjFormating~ipad.xib */,
+				DFA919021862B26E00A51C6A /* rasterPrinting~ipad.xib */,
+				DFA919031862B26E00A51C6A /* TextFormatingMini~ipad.xib */,
+				DFA919041862B26E00A51C6A /* TextFormating~ipad.xib */,
+			);
+			path = IOS_SDK;
+			sourceTree = "<group>";
+		};
+		DFA9739218740D580012D099 /* GMGridView */ = {
+			isa = PBXGroup;
+			children = (
+				DFA9739318740D580012D099 /* GMGridView-Constants.h */,
+				DFA9739418740D580012D099 /* GMGridView.h */,
+				DFA9739518740D580012D099 /* GMGridView.m */,
+				DFA9739618740D580012D099 /* GMGridView.xcodeproj */,
+				DFA9739918740D580012D099 /* GMGridViewCell+Extended.h */,
+				DFA9739A18740D580012D099 /* GMGridViewCell.h */,
+				DFA9739B18740D580012D099 /* GMGridViewCell.m */,
+				DFA9739C18740D580012D099 /* GMGridViewLayoutStrategies.h */,
+				DFA9739D18740D580012D099 /* GMGridViewLayoutStrategies.m */,
+				DFA9739E18740D580012D099 /* UIGestureRecognizer+GMGridViewAdditions.h */,
+				DFA9739F18740D580012D099 /* UIGestureRecognizer+GMGridViewAdditions.m */,
+				DFA973A018740D580012D099 /* UIView+GMGridViewAdditions.h */,
+				DFA973A118740D580012D099 /* UIView+GMGridViewAdditions.m */,
+			);
+			path = GMGridView;
+			sourceTree = "<group>";
+		};
+		DFA9739718740D580012D099 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFA973A918740D580012D099 /* libGMGridView.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DFA973AA18740D690012D099 /* GridView Class */ = {
+			isa = PBXGroup;
+			children = (
+				DFA676BA187566AE00A7799E /* blue-table1.png */,
+				DFA676B8187562BD00A7799E /* red-table1.png */,
+				DFA676B41875410700A7799E /* blue-table.png */,
+				DFA676B51875410700A7799E /* red-table.png */,
+				DFA676B218752AE100A7799E /* Demo1ViewController.m */,
+				DFA676AC187529EA00A7799E /* Demo1ViewController.h */,
+				DFA676AE187529EA00A7799E /* OptionsViewController.h */,
+				DFA676AF187529EA00A7799E /* OptionsViewController.m */,
+				DFA973AB18740DAA0012D099 /* close_x.png */,
+			);
+			name = "GridView Class";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -534,6 +1008,12 @@
 			mainGroup = DF522B9D1679FE1A0032BFAA;
 			productRefGroup = DF522BA91679FE1A0032BFAA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DFA9739718740D580012D099 /* Products */;
+					ProjectRef = DFA9739618740D580012D099 /* GMGridView.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DF522BA71679FE1A0032BFAA /* iRestaurants Universal */,
@@ -542,86 +1022,154 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		DFA973A918740D580012D099 /* libGMGridView.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGMGridView.a;
+			remoteRef = DFA973A818740D580012D099 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		DF522BA61679FE1A0032BFAA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFA676B71875410700A7799E /* red-table.png in Resources */,
+				DFA919601862B26E00A51C6A /* TextFormatingMini~ipad.xib in Resources */,
+				DFA9190B1862B26E00A51C6A /* BarcodeSelector.xib in Resources */,
 				DF522BB71679FE1A0032BFAA /* InfoPlist.strings in Resources */,
 				DF522BC31679FE1B0032BFAA /* Default-568h@2x.png in Resources */,
 				DF522BF8167A04250032BFAA /* loginbtn.png in Resources */,
+				DFA676B9187562BD00A7799E /* red-table1.png in Resources */,
+				DFA919421862B26E00A51C6A /* QRCodeMini.xib in Resources */,
 				DF522BF9167A04250032BFAA /* bg.png in Resources */,
 				DF522BFA167A04250032BFAA /* login-bg.png in Resources */,
+				DFA9738D187403AA0012D099 /* catering.png in Resources */,
+				DFA9192B1862B26E00A51C6A /* IOS_SDKViewControllerPortable.xib in Resources */,
+				DFA9191D1862B26E00A51C6A /* Cut.xib in Resources */,
 				DF522BFB167A04250032BFAA /* login-table.png in Resources */,
 				DF522BFC167A04250032BFAA /* logo.png in Resources */,
 				DF2F2D5A167B4CE200800097 /* bottom.png in Resources */,
+				DFA919321862B26E00A51C6A /* JpKnjFormating.xib in Resources */,
 				DF2F2D5B167B4CE200800097 /* category-heading.png in Resources */,
 				DF2F2D5C167B4CE200800097 /* item-heading.png in Resources */,
+				DFA9E77818728FA600035715 /* order-row-red.png in Resources */,
+				DFA676B61875410700A7799E /* blue-table.png in Resources */,
+				DFA9E77918728FA600035715 /* order-row-drkgreen.png in Resources */,
+				DFA919251862B26E00A51C6A /* IOS_SDK_arm64_support-Info.plist in Resources */,
 				DF2F2D5D167B4CE200800097 /* items-bg.png in Resources */,
 				DF32A51D168081970055242A /* list-icon.png in Resources */,
+				DFA919401862B26E00A51C6A /* QRCode.xib in Resources */,
 				DF32A520168081AF0055242A /* setting-icon.png in Resources */,
 				DF32A522168083200055242A /* all-orders.png in Resources */,
 				DF72F71616831693001659DC /* category-image-box.png in Resources */,
 				DF72F71916832832001659DC /* main-bg.png in Resources */,
 				DF72F71D16832920001659DC /* iteambg.png in Resources */,
+				DFA919581862B26E00A51C6A /* ViewControllerAboutLineMode.xib in Resources */,
+				DFA919341862B26E00A51C6A /* JpKnjFormatingMini.xib in Resources */,
 				DF72F71E16832920001659DC /* pricebar.png in Resources */,
+				DFA919131862B26E00A51C6A /* code128.xib in Resources */,
 				DF72F71F16832920001659DC /* pricewithiteam.png in Resources */,
+				DFA919231862B26E00A51C6A /* ViewController.xib in Resources */,
 				DF72F72116832E53001659DC /* iteamsmallpic.png in Resources */,
 				DF3B43C51685A9F300FD39E5 /* submit-order.png in Resources */,
 				DF3B43C81685AB7E00FD39E5 /* product-row.png in Resources */,
+				DFA97390187405800012D099 /* light-off3.png in Resources */,
 				DF2CF5F1168828CF00D87763 /* itheamthumb.png in Resources */,
 				DF2CF5F416882FE900D87763 /* total-price-head.png in Resources */,
 				DF2CF5F61688391700D87763 /* price-tag.png in Resources */,
+				DFA9E77A18728FA600035715 /* order-row-lghtgreen.png in Resources */,
 				DF4DAEC8168AED2B001010EC /* clear-table-button.png in Resources */,
 				DF4DAECB168AEEC6001010EC /* discount-table.png in Resources */,
 				DF4DAED6168AFB93001010EC /* add.png in Resources */,
 				DF4DAED7168AFB93001010EC /* cancel-button.png in Resources */,
 				DF4DAED8168AFB93001010EC /* main-image-border.png in Resources */,
 				DF4DAED9168AFB93001010EC /* pop-up-bottom.png in Resources */,
+				DFA919551862B26E00A51C6A /* TextFormatingMini.xib in Resources */,
+				DFA919171862B26E00A51C6A /* code93.gif in Resources */,
 				DF4DAEDA168AFB93001010EC /* pop-up-top.png in Resources */,
 				DF4DAEDC168AFB93001010EC /* pop-up=midd.png in Resources */,
 				DF4DAEDD168AFB93001010EC /* quantity-box.png in Resources */,
 				DF4DAEDE168AFB93001010EC /* spcl-instrcuction-box.png in Resources */,
 				DF4DAEE0168B00D6001010EC /* additempoupimgbig.png in Resources */,
 				DF35CCB6168C440B00F926E2 /* allordertable-bg.png in Resources */,
+				DFA919271862B26E00A51C6A /* IOS_SDKViewControllerDKAirCash.xib in Resources */,
 				DF35CCB9168C450C00F926E2 /* heading-top.png in Resources */,
+				DFA9195E1862B26E00A51C6A /* JpKnjFormating~ipad.xib in Resources */,
+				DF38AD1718683F6C0095D74B /* PrinterSetting-icon.png in Resources */,
 				DF20A8CB16A95B8500FDE326 /* cancel.png in Resources */,
+				DFA676BB187566AE00A7799E /* blue-table1.png in Resources */,
 				DF20A8CC16A95B8500FDE326 /* clear-table.png in Resources */,
 				DF20A8CD16A95B8500FDE326 /* update-order.png in Resources */,
+				DFA919371862B26E00A51C6A /* pdf417.gif in Resources */,
 				DF20A8D016A97A3300FDE326 /* update.png in Resources */,
 				6833BA1916AF20F60001AC1A /* closex.png in Resources */,
 				DF1DD6AF16B93A9500C7085B /* plus.png in Resources */,
 				DF1DD6B116B93BA600C7085B /* minus.png in Resources */,
 				DF9A82FD16BFE0500055744E /* doneactive.png in Resources */,
 				DF9A82FE16BFE0500055744E /* done.png in Resources */,
+				DFA9193B1862B26E00A51C6A /* PDF417mini.xib in Resources */,
+				DFA9190E1862B26E00A51C6A /* BluetoothSettingViewController.xib in Resources */,
 				DF9A82FF16BFE0500055744E /* prnding.png in Resources */,
+				DFA919101862B26E00A51C6A /* CheckConnectionViewController.xib in Resources */,
+				DFA919091862B26E00A51C6A /* BarcodePrintingMini.xib in Resources */,
+				DFA919611862B26E00A51C6A /* TextFormating~ipad.xib in Resources */,
 				DF9A830216BFE8050055744E /* poup1024x768.png in Resources */,
+				DFA919191862B26E00A51C6A /* code93.xib in Resources */,
+				DFA9195A1862B26E00A51C6A /* ViewControllerAboutRasterMode.xib in Resources */,
+				DFA9193E1862B26E00A51C6A /* qrcode.gif in Resources */,
 				DF16411016C38A8A00C7B08D /* printalldetail.png in Resources */,
+				DFA9194E1862B26E00A51C6A /* SearchPrinterViewController.xib in Resources */,
+				DFA919291862B26E00A51C6A /* IOS_SDKViewControllerLineMode.xib in Resources */,
 				DF20077416C62BB100D94695 /* poup996x909.png in Resources */,
+				DFA919161862B26E00A51C6A /* code39.xib in Resources */,
+				DFA97391187405800012D099 /* light-on3.png in Resources */,
 				DF20077716C6305A00D94695 /* cc-button.png in Resources */,
+				DFA9195C1862B26E00A51C6A /* ViewControllerEx.xib in Resources */,
 				DF20077916C6306200D94695 /* cash-button.png in Resources */,
+				DFA919221862B26E00A51C6A /* rasterPrinting.xib in Resources */,
 				DF20077B16C63B2400D94695 /* reciept-no-field.png in Resources */,
 				DF20077D16C646E100D94695 /* submit-button.png in Resources */,
+				DFA9193C1862B26E00A51C6A /* POSPrinter_2013_02.JPG in Resources */,
+				DFA9195D1862B26E00A51C6A /* JpKnjFormatingMini~ipad.xib in Resources */,
 				DF20077F16C648F800D94695 /* text-field.png in Resources */,
 				DF59596E16C677DE003C7B67 /* close-button.png in Resources */,
+				DFA9195F1862B26E00A51C6A /* rasterPrinting~ipad.xib in Resources */,
 				DF59596F16C677DE003C7B67 /* dine-in.png in Resources */,
 				DF59597016C677DE003C7B67 /* pending.png in Resources */,
+				DFA9192E1862B26E00A51C6A /* itf.gif in Resources */,
 				DF59597116C677DE003C7B67 /* print-icon.png in Resources */,
 				DF59597216C677DE003C7B67 /* PrinterKiller_Printer.png in Resources */,
+				DFA919391862B26E00A51C6A /* PDF417.xib in Resources */,
 				DF59597316C677DE003C7B67 /* process.png in Resources */,
 				DF59597416C677DE003C7B67 /* take-away.png in Resources */,
 				DF1C9FBD16CF5FF300249052 /* bar_orange.png in Resources */,
+				DFA6CF381869892900E43B03 /* order-row-selected.png in Resources */,
 				DF1C9FBE16CF5FF300249052 /* bar_purple.png in Resources */,
+				DFA919111862B26E00A51C6A /* code128.gif in Resources */,
+				DFA919501862B26E00A51C6A /* StandardHelp.xib in Resources */,
+				DFA9191B1862B26E00A51C6A /* CommonTableView.xib in Resources */,
 				DF1C9FBF16CF5FF300249052 /* bar_selector_orange.png in Resources */,
 				DF1C9FC016CF5FF300249052 /* bar_selector_purple.png in Resources */,
+				DFA973AC18740DAA0012D099 /* close_x.png in Resources */,
+				DFA919211862B26E00A51C6A /* InfoPlist.strings in Resources */,
 				DF1C9FC216CF678D00249052 /* graphsmallbg.png in Resources */,
 				DF123B9A16D2747100E6D658 /* back-button.png in Resources */,
 				DF662FB516D6401800EAB8D1 /* basegraphbg.png in Resources */,
 				DF034A4616D766F200BC5C44 /* graphnavimage.png in Resources */,
 				DF034A4916D76B8700BC5C44 /* backbtn.png in Resources */,
 				DF2B6E7E16DF515D00C0C80E /* order-row.png in Resources */,
+				DFA919241862B26E00A51C6A /* IOS_SDK-Info.plist in Resources */,
 				DF2B6E8016DF6CF800C0C80E /* Default-Landscape.png in Resources */,
 				DF2B6E8216DF7B3600C0C80E /* icon.png in Resources */,
+				DFA9192D1862B26E00A51C6A /* IOS_SDKViewControllerRasterMode.xib in Resources */,
+				DFA919141862B26E00A51C6A /* code39.gif in Resources */,
+				DFA919201862B26E00A51C6A /* DSC02167.JPG in Resources */,
+				DFA919531862B26E00A51C6A /* TextFormating.xib in Resources */,
+				DFA919301862B26E00A51C6A /* ITF.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,15 +1204,60 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFA9191C1862B26E00A51C6A /* Cut.m in Sources */,
+				DFA919521862B26E00A51C6A /* TextFormating.m in Sources */,
+				DFA9194F1862B26E00A51C6A /* StandardHelp.m in Sources */,
+				DFA9191F1862B26E00A51C6A /* DKAirCashFunctions.m in Sources */,
+				DFA919381862B26E00A51C6A /* PDF417.m in Sources */,
+				DFA919121862B26E00A51C6A /* code128.m in Sources */,
+				DFA919311862B26E00A51C6A /* JpKnjFormating.m in Sources */,
+				DFA676B318752AE100A7799E /* Demo1ViewController.m in Sources */,
+				DFA9190C1862B26E00A51C6A /* BarcodeSelector2D.m in Sources */,
+				DFA9192C1862B26E00A51C6A /* IOS_SDKViewControllerRasterMode.m in Sources */,
+				DFA919561862B26E00A51C6A /* ViewController.m in Sources */,
 				DF522BB91679FE1B0032BFAA /* main.m in Sources */,
+				DFA919061862B26E00A51C6A /* ActionSheetStringPicker.m in Sources */,
+				DFA9194D1862B26E00A51C6A /* SearchPrinterViewController.m in Sources */,
+				DFA919431862B26E00A51C6A /* RasterDocument.m in Sources */,
+				DFA919051862B26E00A51C6A /* AbstractActionSheetPicker.m in Sources */,
 				DF522BBD1679FE1B0032BFAA /* iRestaurantsAppDelegate.m in Sources */,
+				DFA9192A1862B26E00A51C6A /* IOS_SDKViewControllerPortable.m in Sources */,
+				DFA919571862B26E00A51C6A /* ViewControllerAboutLineMode.m in Sources */,
+				DFA973A618740D580012D099 /* UIView+GMGridViewAdditions.m in Sources */,
+				DFA919081862B26E00A51C6A /* BarcodePrintingMini.m in Sources */,
 				DF522BE31679FF070032BFAA /* iRestaurantsLoginViewController.m in Sources */,
 				DF522BE61679FF940032BFAA /* iRestaurantsHomeViewController.m in Sources */,
+				DFA9193A1862B26E00A51C6A /* PDF417mini.m in Sources */,
+				DFA973A218740D580012D099 /* GMGridView.m in Sources */,
 				DF7C34CF169572B700135299 /* GetiRestaurantsCatiteams.m in Sources */,
+				DFA919181862B26E00A51C6A /* code93.m in Sources */,
 				DFB7DC9D1695AF07000DFD2A /* GetiRestaurantsCatsubIteam.m in Sources */,
+				DFA919411862B26E00A51C6A /* QRCodeMini.m in Sources */,
+				DFA919441862B26E00A51C6A /* rasterPrinting.m in Sources */,
+				DFA9190A1862B26E00A51C6A /* BarcodeSelector.m in Sources */,
+				DFA919511862B26E00A51C6A /* StarBitmap.m in Sources */,
+				DFA9191A1862B26E00A51C6A /* CommonTableView.m in Sources */,
+				DFA919261862B26E00A51C6A /* IOS_SDKViewControllerDKAirCash.m in Sources */,
+				DFA9192F1862B26E00A51C6A /* ITF.m in Sources */,
+				DFA973A418740D580012D099 /* GMGridViewLayoutStrategies.m in Sources */,
+				DFA919071862B26E00A51C6A /* AppDelegate.m in Sources */,
+				DFA973A318740D580012D099 /* GMGridViewCell.m in Sources */,
+				DFA9193F1862B26E00A51C6A /* QRCode.m in Sources */,
+				DFA9190D1862B26E00A51C6A /* BluetoothSettingViewController.m in Sources */,
+				DFA919281862B26E00A51C6A /* IOS_SDKViewControllerLineMode.m in Sources */,
 				DF23E2EB169D4E45005A8876 /* GetiRestaurantsAllorder.m in Sources */,
+				DFA919151862B26E00A51C6A /* code39.m in Sources */,
+				DFA919361862B26E00A51C6A /* MiniPrinterFunctions.m in Sources */,
+				DFA919331862B26E00A51C6A /* JpKnjFormatingMini.m in Sources */,
+				DFA9195B1862B26E00A51C6A /* ViewControllerEx.m in Sources */,
+				DFA676B0187529EA00A7799E /* OptionsViewController.m in Sources */,
+				DFA973A518740D580012D099 /* UIGestureRecognizer+GMGridViewAdditions.m in Sources */,
+				DFA919541862B26E00A51C6A /* TextFormatingMini.m in Sources */,
 				DF1C9FB716CF5EB300249052 /* iRestaurantsGraphViewController.m in Sources */,
+				DFA919591862B26E00A51C6A /* ViewControllerAboutRasterMode.m in Sources */,
 				DF63A7F616D4D03800A585B0 /* iRestaurantsNewOrderViewController.m in Sources */,
+				DFA9190F1862B26E00A51C6A /* CheckConnectionViewController.m in Sources */,
+				DFA9193D1862B26E00A51C6A /* PrinterFunctions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +1296,30 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		DFA918A41862B26E00A51C6A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFA918A51862B26E00A51C6A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DFA918A61862B26E00A51C6A /* rasterPrinting.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFA918A71862B26E00A51C6A /* en */,
+			);
+			name = rasterPrinting.xib;
+			sourceTree = "<group>";
+		};
+		DFA918A81862B26E00A51C6A /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFA918A91862B26E00A51C6A /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -714,8 +1331,8 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dex Consulting (8E6M7S3Q9P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dex Consulting (8E6M7S3Q9P)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -730,8 +1347,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
+				PROVISIONING_PROFILE = "47E0481B-6852-4778-849A-1CA8D88C50C7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "47E0481B-6852-4778-849A-1CA8D88C50C7";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -745,8 +1362,8 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dex Consulting (8E6M7S3Q9P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dex Consulting (8E6M7S3Q9P)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -754,8 +1371,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
+				PROVISIONING_PROFILE = "47E0481B-6852-4778-849A-1CA8D88C50C7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "47E0481B-6852-4778-849A-1CA8D88C50C7";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -766,15 +1383,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "iRestaurants Universal/iRestaurants Universal.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dex Consulting (8E6M7S3Q9P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dex Consulting (8E6M7S3Q9P)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Dex/Downloads/StarIO_iOS_SDK_V390\\ 2/Distributables",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iRestaurants Universal/iRestaurants Universal-Prefix.pch";
 				INFOPLIST_FILE = "iRestaurants Universal/iRestaurants Universal-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
+				PROVISIONING_PROFILE = "47E0481B-6852-4778-849A-1CA8D88C50C7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "47E0481B-6852-4778-849A-1CA8D88C50C7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -783,15 +1404,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "iRestaurants Universal/iRestaurants Universal.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dex Consulting (8E6M7S3Q9P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dex Consulting (8E6M7S3Q9P)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Dex/Downloads/StarIO_iOS_SDK_V390\\ 2/Distributables",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iRestaurants Universal/iRestaurants Universal-Prefix.pch";
 				INFOPLIST_FILE = "iRestaurants Universal/iRestaurants Universal-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
+				PROVISIONING_PROFILE = "47E0481B-6852-4778-849A-1CA8D88C50C7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "47E0481B-6852-4778-849A-1CA8D88C50C7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -846,8 +1471,8 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dex Consulting (8E6M7S3Q9P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dex Consulting (8E6M7S3Q9P)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -855,8 +1480,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
+				PROVISIONING_PROFILE = "47E0481B-6852-4778-849A-1CA8D88C50C7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "47E0481B-6852-4778-849A-1CA8D88C50C7";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -867,15 +1492,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "iRestaurants Universal/iRestaurants Universal.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Satayender Chaudhary (CVU3K3489X)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dex Consulting (8E6M7S3Q9P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dex Consulting (8E6M7S3Q9P)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Dex/Downloads/StarIO_iOS_SDK_V390\\ 2/Distributables",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iRestaurants Universal/iRestaurants Universal-Prefix.pch";
 				INFOPLIST_FILE = "iRestaurants Universal/iRestaurants Universal-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "361BCFE0-3A03-4E46-840E-8D8D915B5EA6";
+				PROVISIONING_PROFILE = "47E0481B-6852-4778-849A-1CA8D88C50C7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "47E0481B-6852-4778-849A-1CA8D88C50C7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Adhoc;

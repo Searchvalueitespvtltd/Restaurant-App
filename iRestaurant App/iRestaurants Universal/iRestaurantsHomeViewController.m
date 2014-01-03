@@ -8,9 +8,13 @@
 
 #import "iRestaurantsHomeViewController.h"
 #import "iRestaurantsLoginViewController.h"
+#import "DKAirCashFunctions.h"
+#import "rasterPrinting.h"
+#import "MiniPrinterFunctions.h"
+#import "PrinterFunctions.h"
 NSString * waitername;
 NSString * currentwaitername;
-NSString * tablenoglob;
+
 NSInteger currenttblname;
 BOOL stopdoublselection;
 NSString * updatepaymentIDval;
@@ -53,12 +57,13 @@ BOOL IShidden;
 {
     [super viewDidLoad];
     tempint=1;
-    inStr = @"1.00";
+    //inStr = @"1.00";
     //temp service
     ordarstatusarr = [[NSMutableArray alloc] init];
     tablenoarr = [[NSMutableArray alloc] init];
 	waiternamearr = [[NSMutableArray alloc] init];
     tokenarr = [[NSMutableArray alloc] init];
+    timearr= [[NSMutableArray alloc] init];
     ordernamearr = [[NSMutableArray alloc] init];
     finalArray = [[NSMutableArray alloc] init];
     orderidarr = [[NSMutableArray alloc] init];
@@ -162,7 +167,11 @@ BOOL IShidden;
     allorderbglogo.opaque = YES;
     [Bg addSubview:allorderbglogo];
     
-    
+    UIButton * settingbtn_printer =[UIButton buttonWithType:UIButtonTypeCustom];
+	settingbtn_printer.frame=CGRectMake(834,18,37.5,38.5);
+    [settingbtn_printer setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PrinterSetting-icon" ofType:@"png"]] forState:UIControlStateNormal];
+	[settingbtn_printer addTarget:self action:@selector(printerSettings) forControlEvents:UIControlEventTouchUpInside];
+	[Bg addSubview:settingbtn_printer];
     
     
     UIButton * settingbtn =[UIButton buttonWithType:UIButtonTypeCustom];
@@ -255,7 +264,13 @@ BOOL IShidden;
 }
 
 
-
+-(void)printerSettings
+{
+    ViewController *viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] ;
+    [self.navigationController pushViewController:viewController animated:YES];
+    [viewController release];
+    
+}
 
 -(void)graphview{
     
@@ -293,6 +308,8 @@ BOOL IShidden;
             [waiternamearr removeAllObjects];
         if(ordernamearr)
             [ordernamearr removeAllObjects];
+        if(timearr)
+            [timearr removeAllObjects];
         
         //Start setup area for all order before load parsing data
         
@@ -341,14 +358,14 @@ BOOL IShidden;
         allordertitle.font=[UIFont fontWithName:@"Arial-BoldMT" size:(22.0f)];
         [allorderbg addSubview:allordertitle];
         
-        UIImageView *allorderheadbar = [[[UIImageView alloc] initWithFrame:CGRectMake(5,74, 1008,55)]autorelease];
+        UIImageView *allorderheadbar = [[[UIImageView alloc] initWithFrame:CGRectMake(8,74, 1008,55)]autorelease];
         [allorderheadbar setImage:[UIImage imageNamed:@"heading-top.png"]];
         allorderheadbar.opaque = YES;
         [allorderbg addSubview:allorderheadbar];
         
         UILabel *allorderdetailrow;
         allorderdetailrow = [[[UILabel alloc] initWithFrame:CGRectMake(0,15,1020,30)]autorelease];
-        allorderdetailrow.text = @"   Waiter/Cashier Name               Table/Token Number             Order Status                 Payment                     Print Detail";
+        allorderdetailrow.text = @"  Waiter/Cashier Name            Table/Token Number            Order Status            Time            Payment            Print Detail";
         allorderdetailrow.textAlignment = 0;
         allorderdetailrow.backgroundColor = [UIColor clearColor];
         allorderdetailrow.textColor = [UIColor colorWithRed:137/255.0 green:137/255.0 blue:137/255.0 alpha:1];
@@ -435,6 +452,7 @@ BOOL IShidden;
         
         
         NSLog(@"Submit %@",finalArray);
+          NSLog(@"tablenoglob %@",self.tablenoglob);
         
         NSString *newString  =[finalArray componentsJoinedByString:@";"];
         stringval=@"";
@@ -450,11 +468,14 @@ BOOL IShidden;
                            "<soap:Body>"
                            "<MediaMenu xmlns=\"http://204.197.244.110/~crmdalto/restaurant/index.php?order=%@;&table=%@&wname=%@&token=1/\"/>"
                            "</soap:Body>"
-                           "</soap:Envelope>",stringval,tablenoglob,waitername];
+                           "</soap:Envelope>",stringval,self.tablenoglob,waitername];
             
             
             
-            url = [NSURL URLWithString:[NSString stringWithFormat:@"http://204.197.244.110/~crmdalto/restaurant/index.php?order=%@;&table=%@&wname=%@&token=1",stringval,tablenoglob,waitername]];
+            url = [NSURL URLWithString:[NSString stringWithFormat:@"http://204.197.244.110/~crmdalto/restaurant/index.php?order=%@;&table=%@&wname=%@&token=1",stringval,self.tablenoglob,waitername]];
+            
+            
+            
         }
         else{
             
@@ -464,11 +485,11 @@ BOOL IShidden;
                            "<soap:Body>"
                            "<MediaMenu xmlns=\"http://204.197.244.110/~crmdalto/restaurant/index.php?order=%@;&table=%@&wname=%@&token=0/\"/>"
                            "</soap:Body>"
-                           "</soap:Envelope>",stringval,tablenoglob,waitername];
+                           "</soap:Envelope>",stringval,self.tablenoglob,waitername];
             
             
             
-            url = [NSURL URLWithString:[NSString stringWithFormat:@"http://204.197.244.110/~crmdalto/restaurant/index.php?order=%@;&table=%@&wname=%@&token=0",stringval,tablenoglob,waitername]];
+            url = [NSURL URLWithString:[NSString stringWithFormat:@"http://204.197.244.110/~crmdalto/restaurant/index.php?order=%@;&table=%@&wname=%@&token=0",stringval,self.tablenoglob,waitername]];
         }
         
         NSLog(@"Token, %@",url);
@@ -581,11 +602,18 @@ BOOL IShidden;
         if(tableiteamnameprice){
             [tableiteamnameprice removeAllObjects];
         }
+        if(timearr){
+            [timearr removeAllObjects];
+        }
         
         
         
-		webData = [[NSMutableData data] retain];}
-	else{NSLog(@"theConnection is NULL");}
+		webData = [[NSMutableData data] retain];
+    }
+	else
+    {
+        NSLog(@"theConnection is NULL");
+    }
 	
     
     
@@ -611,126 +639,138 @@ BOOL IShidden;
 -(void)serviceclickallordercell:(id)sender{
     
     
-    activityIndicatoorallorder.frame=CGRectMake(495, 358,40, 40);
-    [activityIndicatoorallorder startAnimating];
-    [self.view  addSubview:activityIndicatoorallorder];
-    
-    allorderupdatebool=TRUE;
-    NSInteger temptag = ((UIButton *)sender).tag;
-    temptag=temptag-100;
-    NSLog(@"serviceclickallordercell %@",[orderidarr121 objectAtIndex:temptag]);
-    
-    
-    //Used condion for categores item double click block / multiple btn selection
-    if(!stopdoublselection){
-        stopdoublselection=TRUE;
+    if ([sender tag] !=999999) {
+        [sender setSelected:YES];
         
-        // if(popupTag==101){
-        NSInteger orderidtemp= [[orderidarr121 objectAtIndex:temptag] integerValue];
-        currentwaitername =[waiternamearr objectAtIndex:temptag];
-        currenttblname=[[tablenoarr objectAtIndex:temptag] integerValue];
+        backgroundImage=[[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width)];
+        [backgroundImage setBackgroundColor:[UIColor grayColor]];
+        [backgroundImage setAlpha:0.5];
+        [backgroundImage setHidden:NO];
+        [self.view addSubview:backgroundImage];
+        activityIndicatoorallorder.frame=CGRectMake(495, 358,40, 40);
+        [activityIndicatoorallorder startAnimating];
+        [self.view  addSubview:activityIndicatoorallorder];
         
-        UIButton * addtoservertblbtn =[UIButton buttonWithType:UIButtonTypeCustom];
-        addtoservertblbtn.frame=CGRectMake(400, 550,138.5, 30);
-        if(allorderupdatebool){
+        allorderupdatebool=TRUE;
+        NSInteger temptag = ((UIButton *)sender).tag;
+        temptag=temptag-100;
+        NSLog(@"serviceclickallordercell %@",[orderidarr121 objectAtIndex:temptag]);
+        
+        
+        //Used condion for categores item double click block / multiple btn selection
+        if(!stopdoublselection){
+            stopdoublselection=TRUE;
             
-            [addtoservertblbtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"update" ofType:@"png"]] forState:UIControlStateNormal];
-            addtoservertblbtn.tag=213;
-            if([tableiteamname count]>0){
+            // if(popupTag==101){
+            NSInteger orderidtemp= [[orderidarr121 objectAtIndex:temptag] integerValue];
+            currentwaitername =[waiternamearr objectAtIndex:temptag];
+            currenttblname=[[tablenoarr objectAtIndex:temptag] integerValue];
+            
+            UIButton * addtoservertblbtn =[UIButton buttonWithType:UIButtonTypeCustom];
+            addtoservertblbtn.frame=CGRectMake(400, 550,138.5, 30);
+            if(allorderupdatebool){
+                
+                [addtoservertblbtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"update" ofType:@"png"]] forState:UIControlStateNormal];
+                addtoservertblbtn.tag=213;
+                if([tableiteamname count]>0){
+                    
+                    [addtoservertblbtn addTarget:self action:@selector(callWebService1:) forControlEvents:UIControlEventTouchUpInside];
+                }
+                else{
+                    
+                    [addtoservertblbtn addTarget:self action:@selector(NullmsgAlert) forControlEvents:UIControlEventTouchUpInside];
+                }
+                
+                
+            }
+            else{
+                [addtoservertblbtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"submit-order" ofType:@"png"]] forState:UIControlStateNormal];
+                addtoservertblbtn.tag=212;
                 
                 [addtoservertblbtn addTarget:self action:@selector(callWebService1:) forControlEvents:UIControlEventTouchUpInside];
             }
-            else{
-                
-                [addtoservertblbtn addTarget:self action:@selector(NullmsgAlert) forControlEvents:UIControlEventTouchUpInside];
+            
+            
+            
+            [addlistbgimage addSubview:addtoservertblbtn];
+            
+            
+            
+            //  tablenoglob=currenttblname;
+            
+            NSLog(@"allorder item click id:-  %d", currenttblname=[[tablenoarr objectAtIndex:temptag] integerValue]);
+            
+            
+            relodtbl=TRUE;
+            
+            if(tablenoarr){
+                [tablenoarr removeAllObjects];
+            }
+            if(tableiteamname){
+                [tableiteamname removeAllObjects];
+            }
+            if(tblquantity){
+                [tblquantity removeAllObjects];
+            }
+            if(tblcommenttext){
+                [tblcommenttext removeAllObjects];
+            }
+            if(tbliteamid){
+                [tbliteamid removeAllObjects];
+            }
+            if(updateorderid){
+                [updateorderid removeAllObjects];
+            }
+            if(allpricearr){
+                [allpricearr removeAllObjects];
+            }
+            if(orderidarr121){
+                [orderidarr121 removeAllObjects];
+            }
+            if(tableiteamnameprice){
+                [tableiteamnameprice removeAllObjects];
+            }
+            if (timearr) {
+                [timearr removeAllObjects];
             }
             
+            soapMessage = [NSString stringWithFormat:
+                           @"<?xml version=\"1.0\" encoding=\"utf-8\"?>"
+                           "<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">"
+                           "<soap:Body>"
+                           "<MediaMenu xmlns=\"http://204.197.244.110/~crmdalto/restaurant/index.php?id=%d&status/\"/>"
+                           "</soap:Body>"
+                           "</soap:Envelope>",orderidtemp];
+            
+            
+            url = [NSURL URLWithString:[NSString stringWithFormat:@"http://204.197.244.110/~crmdalto/restaurant/index.php?id=%d&status",orderidtemp]];
+            
+            NSLog(@"URL %@",url);
+            
+            // }
+            
+            NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
+            NSString *msgLength = [NSString stringWithFormat:@"%d", [soapMessage length]];
+            
+            [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+            [theRequest addValue: msgLength forHTTPHeaderField:@"Content-Length"];//Count MSG Length
+            [theRequest setHTTPMethod:@"POST"]; //Method
+            [theRequest setHTTPBody: [soapMessage dataUsingEncoding:NSUTF8StringEncoding]]; //encoding sopmsg
+            
+            NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];//create connection
+            
+            NSLog(@"con Soap MSG %@",soapMessage);
+            
+            if( theConnection )	{
+                webData = [[NSMutableData data] retain];}
+            else	{
+                NSLog(@"theConnection is NULL");}
             
         }
-        else{
-            [addtoservertblbtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"submit-order" ofType:@"png"]] forState:UIControlStateNormal];
-            addtoservertblbtn.tag=212;
-            
-            [addtoservertblbtn addTarget:self action:@selector(callWebService1:) forControlEvents:UIControlEventTouchUpInside];
-        }
         
         
-        
-        [addlistbgimage addSubview:addtoservertblbtn];
-        
-        
-        
-        //  tablenoglob=currenttblname;
-        
-        NSLog(@"allorder item click id:-  %d", currenttblname=[[tablenoarr objectAtIndex:temptag] integerValue]);
-        
-        
-        relodtbl=TRUE;
-        
-        if(tablenoarr){
-            [tablenoarr removeAllObjects];
-        }
-        if(tableiteamname){
-            [tableiteamname removeAllObjects];
-        }
-        if(tblquantity){
-            [tblquantity removeAllObjects];
-        }
-        if(tblcommenttext){
-            [tblcommenttext removeAllObjects];
-        }
-        if(tbliteamid){
-            [tbliteamid removeAllObjects];
-        }
-        if(updateorderid){
-            [updateorderid removeAllObjects];
-        }
-        if(allpricearr){
-            [allpricearr removeAllObjects];
-        }
-        if(orderidarr121){
-            [orderidarr121 removeAllObjects];
-        }
-        if(tableiteamnameprice){
-            [tableiteamnameprice removeAllObjects];
-        }
-        
-        
-        soapMessage = [NSString stringWithFormat:
-                       @"<?xml version=\"1.0\" encoding=\"utf-8\"?>"
-                       "<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">"
-                       "<soap:Body>"
-                       "<MediaMenu xmlns=\"http://204.197.244.110/~crmdalto/restaurant/index.php?id=%d&status/\"/>"
-                       "</soap:Body>"
-                       "</soap:Envelope>",orderidtemp];
-        
-        
-        url = [NSURL URLWithString:[NSString stringWithFormat:@"http://204.197.244.110/~crmdalto/restaurant/index.php?id=%d&status",orderidtemp]];
-        
-        NSLog(@"URL %@",url);
-        
-        // }
-        
-        NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-        NSString *msgLength = [NSString stringWithFormat:@"%d", [soapMessage length]];
-        
-        [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-        [theRequest addValue: msgLength forHTTPHeaderField:@"Content-Length"];//Count MSG Length
-        [theRequest setHTTPMethod:@"POST"]; //Method
-        [theRequest setHTTPBody: [soapMessage dataUsingEncoding:NSUTF8StringEncoding]]; //encoding sopmsg
-        
-        NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];//create connection
-        
-        NSLog(@"con Soap MSG %@",soapMessage);
-        
-        if( theConnection )	{
-            webData = [[NSMutableData data] retain];}
-        else	{
-            NSLog(@"theConnection is NULL");}
-        
+
     }
-    
-    
     
     
 }
@@ -849,179 +889,13 @@ BOOL IShidden;
 	[message release];//msg release
 	
 }
-
-
-
-- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
-{
-	if ([elementName isEqualToString:@"table_no"]) {
-		soapResults = [[NSMutableString alloc]init];
-	}
-    else if ([elementName isEqualToString:@"status"]) {
-		soapResults = [[NSMutableString alloc]init];
-	}
-    else if ([elementName isEqualToString:@"item_name"]) {
-		soapResults = [[NSMutableString alloc]init];
-	}
-    
-    else if ([elementName isEqualToString:@"waiter"]) {
-		soapResults = [[NSMutableString alloc]init];
-	}
-    else if ([elementName isEqualToString:@"order_id"]) {
-		soapResults = [[NSMutableString alloc]init];
-	}
-    else if ([elementName isEqualToString:@"item_price"]) {
-		soapResults = [[NSMutableString alloc]init];
-	}
-    else if ([elementName isEqualToString:@"quantity"]) {
-		soapResults = [[NSMutableString alloc]init];
-	}
-    else if ([elementName isEqualToString:@"details"]) {
-		soapResults = [[NSMutableString alloc]init];
-    }
-    else if ([elementName isEqualToString:@"price"]) {
-		soapResults = [[NSMutableString alloc]init];
-    }
-    else if ([elementName isEqualToString:@"order_item_id"]) {
-		soapResults = [[NSMutableString alloc]init];
-    }
-    else if ([elementName isEqualToString:@"token"]) {
-		soapResults = [[NSMutableString alloc]init];
-    }
-    
-}
-
-- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{
-	
-	[soapResults appendString:string];
-	
-}
-
-
--(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
-    
-    
-	if ([elementName isEqualToString:@"table_no"]) {
-		//[tblquantity addObject:soapResults];
-        [tablenoarr addObject:soapResults];
-        [soapResults release];
-		soapResults = nil;
-    }
-    else if ([elementName isEqualToString:@"status"]) {
-		
-        [ordarstatusarr addObject:soapResults];
-        [soapResults release];
-		soapResults = nil;
-    }
-    
-    else if ([elementName isEqualToString:@"quantity"]) {
-		[tblquantity addObject:soapResults];
-        // [ordarstatusarr addObject:soapResults];
-        [soapResults release];
-		soapResults = nil;
-    }
-    
-    else if ([elementName isEqualToString:@"item_name"]) {
-		[tableiteamname addObject:soapResults];
-        [ordernamearr addObject:soapResults];
-        [soapResults release];
-		soapResults = nil;
-    }
-    else if ([elementName isEqualToString:@"waiter"]) {
-		//[tblquantity addObject:soapResults];
-        [waiternamearr addObject:soapResults];
-        [soapResults release];
-		soapResults = nil;
-    }
-    else if ([elementName isEqualToString:@"token"]) {
-		//[tblquantity addObject:soapResults];
-        [tokenarr addObject:soapResults];
-        [soapResults release];
-		soapResults = nil;
-    }
-    
-    else if ([elementName isEqualToString:@"item_price"]) {
-		[tableiteamnameprice addObject:soapResults];
-        [soapResults release];
-		soapResults = nil;
-    }
-    
-    else if ([elementName isEqualToString:@"details"]) {
-		[tblcommenttext addObject:soapResults];
-        [soapResults release];
-		soapResults = nil;
-    }
-    else if ([elementName isEqualToString:@"price"]) {
-		[allpricearr addObject:soapResults];
-        [soapResults release];
-		soapResults = nil;
-    }
-    
-    
-    
-    else if ([elementName isEqualToString:@"order_id"]) {
-		
-        if(orderidarr){
-            
-            [updateorderid removeAllObjects];
-            [orderidarr removeAllObjects];
-        }
-        
-        
-        if(allorderupdatebool){
-            [updateorderid addObject:soapResults];
-            NSLog(@"updateorderidupdateorderid %@",updateorderid);
-        }
-        else{
-            
-            //because orid id works some place as item id but not in update case
-            [tbliteamid addObject:soapResults];
-        }
-        
-        [orderidarr121 addObject:soapResults];
-        [orderidarr addObject:soapResults];
-        [soapResults release];
-		soapResults = nil;
-        
-    }
-    
-    
-    else if ([elementName isEqualToString:@"order_item_id"]) {
-        
-        if(orderidarr){
-            [orderidarr removeAllObjects];
-        }
-        
-        if(allorderupdatebool){
-            [tbliteamid addObject:soapResults];
-        }
-        else{
-            
-            //because orid id works some place as item id but not in update case
-            [tbliteamid addObject:soapResults];
-        }
-        
-        [orderidarr121 addObject:soapResults];
-        [orderidarr addObject:soapResults];
-        [soapResults release];
-        soapResults = nil;
-        NSLog(@"orderidarr %@",orderidarr);
-        NSLog(@"orderidarr %@",orderidarr121);
-        
-    }
-    
-    
-    
-}
-
-
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection //when connection done to recieve data
 {
 	
     stopdoublselection=FALSE;
-    
+    [backgroundImage setHidden:YES];
     [activityIndicatoorallorder stopAnimating];
-	
+	[clickrowbtn setSelected:NO];
     [activityIndicatoor stopAnimating];
     
     NSLog(@"DONE. Received Bytes: %d", [webData length]);
@@ -1115,6 +989,180 @@ BOOL IShidden;
 }
 
 
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
+{
+	if ([elementName isEqualToString:@"table_no"]) {
+		soapResults = [[NSMutableString alloc]init];
+	}
+    else if ([elementName isEqualToString:@"status"]) {
+		soapResults = [[NSMutableString alloc]init];
+	}
+    else if ([elementName isEqualToString:@"item_name"]) {
+		soapResults = [[NSMutableString alloc]init];
+	}
+    
+    else if ([elementName isEqualToString:@"waiter"]) {
+		soapResults = [[NSMutableString alloc]init];
+	}
+    else if ([elementName isEqualToString:@"order_id"]) {
+		soapResults = [[NSMutableString alloc]init];
+	}
+    else if ([elementName isEqualToString:@"item_price"]) {
+		soapResults = [[NSMutableString alloc]init];
+	}
+    else if ([elementName isEqualToString:@"quantity"]) {
+		soapResults = [[NSMutableString alloc]init];
+	}
+    else if ([elementName isEqualToString:@"details"]) {
+		soapResults = [[NSMutableString alloc]init];
+    }
+    else if ([elementName isEqualToString:@"price"]) {
+		soapResults = [[NSMutableString alloc]init];
+    }
+    else if ([elementName isEqualToString:@"order_item_id"]) {
+		soapResults = [[NSMutableString alloc]init];
+    }
+    else if ([elementName isEqualToString:@"token"]) {
+		soapResults = [[NSMutableString alloc]init];
+    }
+    else if ([elementName isEqualToString:@"timestamp"]) {
+		soapResults = [[NSMutableString alloc]init];
+    }
+    
+}
+
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{
+	
+	[soapResults appendString:string];
+	
+}
+
+
+-(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
+    
+    
+	if ([elementName isEqualToString:@"table_no"]) {
+		//[tblquantity addObject:soapResults];
+        [tablenoarr addObject:soapResults];
+        [soapResults release];
+		soapResults = nil;
+    }
+    else if ([elementName isEqualToString:@"status"]) {
+		
+        [ordarstatusarr addObject:soapResults];
+        [soapResults release];
+		soapResults = nil;
+    }
+    else if ([elementName isEqualToString:@"timestamp"]) {
+		
+        [timearr addObject:soapResults];
+        [soapResults release];
+		soapResults = nil;
+    }
+    else if ([elementName isEqualToString:@"quantity"]) {
+		[tblquantity addObject:soapResults];
+        // [ordarstatusarr addObject:soapResults];
+        [soapResults release];
+		soapResults = nil;
+    }
+    
+    else if ([elementName isEqualToString:@"item_name"]) {
+		[tableiteamname addObject:soapResults];
+        [ordernamearr addObject:soapResults];
+        [soapResults release];
+		soapResults = nil;
+    }
+    else if ([elementName isEqualToString:@"waiter"]) {
+		//[tblquantity addObject:soapResults];
+        [waiternamearr addObject:soapResults];
+        [soapResults release];
+		soapResults = nil;
+    }
+    else if ([elementName isEqualToString:@"token"]) {
+		//[tblquantity addObject:soapResults];
+        [tokenarr addObject:soapResults];
+        [soapResults release];
+		soapResults = nil;
+    }
+
+    else if ([elementName isEqualToString:@"item_price"]) {
+		[tableiteamnameprice addObject:soapResults];
+        [soapResults release];
+		soapResults = nil;
+    }
+    
+    else if ([elementName isEqualToString:@"details"]) {
+		[tblcommenttext addObject:soapResults];
+        [soapResults release];
+		soapResults = nil;
+    }
+    else if ([elementName isEqualToString:@"price"]) {
+		[allpricearr addObject:soapResults];
+        [soapResults release];
+		soapResults = nil;
+    }
+    
+    
+    
+    else if ([elementName isEqualToString:@"order_id"]) {
+		
+        if(orderidarr){
+            
+            [updateorderid removeAllObjects];
+            [orderidarr removeAllObjects];
+        }
+        
+        
+        if(allorderupdatebool){
+            [updateorderid addObject:soapResults];
+            NSLog(@"updateorderidupdateorderid %@",updateorderid);
+        }
+        else{
+            
+            //because orid id works some place as item id but not in update case
+            [tbliteamid addObject:soapResults];
+        }
+        
+        [orderidarr121 addObject:soapResults];
+        [orderidarr addObject:soapResults];
+        [soapResults release];
+		soapResults = nil;
+        
+    }
+    
+    
+    else if ([elementName isEqualToString:@"order_item_id"]) {
+        
+        if(orderidarr){
+            [orderidarr removeAllObjects];
+        }
+        
+        if(allorderupdatebool){
+            [tbliteamid addObject:soapResults];
+        }
+        else{
+            
+            //because orid id works some place as item id but not in update case
+            [tbliteamid addObject:soapResults];
+        }
+        
+        [orderidarr121 addObject:soapResults];
+        [orderidarr addObject:soapResults];
+        [soapResults release];
+        soapResults = nil;
+        NSLog(@"orderidarr %@",orderidarr);
+        NSLog(@"orderidarr %@",orderidarr121);
+        
+    }
+    
+    
+    
+}
+
+
+
+
+
 
 //end service
 
@@ -1150,18 +1198,27 @@ BOOL IShidden;
     
     
     dininbtn =[UIButton buttonWithType:UIButtonTypeCustom];
-	dininbtn.frame=CGRectMake(135,150,167,43);
+	//dininbtn.frame=CGRectMake(135,150,167,43);
+    dininbtn.frame=CGRectMake(28.5,150,150,43);
     [dininbtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"take-away" ofType:@"png"]] forState:UIControlStateNormal];
 	[dininbtn addTarget:self action:@selector(dineinOrderAction) forControlEvents:UIControlEventTouchUpInside];
 	[loginareabg addSubview:dininbtn];
     
     
     takewaybtn =[UIButton buttonWithType:UIButtonTypeCustom];
-	takewaybtn.frame=CGRectMake(355,150,167,43);
+	//takewaybtn.frame=CGRectMake(355,150,167,43);
+    takewaybtn.frame=CGRectMake(235.5,150,150,43);
     [takewaybtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"dine-in" ofType:@"png"]] forState:UIControlStateNormal];
 	[takewaybtn addTarget:self action:@selector(takeawayOrderaction) forControlEvents:UIControlEventTouchUpInside];
 	[loginareabg addSubview:takewaybtn];
     
+    
+    cateringbtn =[UIButton buttonWithType:UIButtonTypeCustom];
+    cateringbtn.frame=CGRectMake(442.5,150,150,43);
+    [cateringbtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"catering" ofType:@"png"]] forState:UIControlStateNormal];
+	[cateringbtn addTarget:self action:@selector(cateringOrderaction) forControlEvents:UIControlEventTouchUpInside];
+	[loginareabg addSubview:cateringbtn];
+
     
     [NSTimer scheduledTimerWithTimeInterval:0.1  target:self  selector:@selector(bgloginaction)  userInfo:nil repeats:NO];
     
@@ -1169,10 +1226,138 @@ BOOL IShidden;
     
 }
 
+-(void)cateringOrderaction
+{
+    dininbtn.hidden=TRUE;
+    takewaybtn.hidden=TRUE;
+    cateringbtn.hidden=TRUE;
+    ordertypelbl.font=[UIFont fontWithName:@"Arial" size:(30)];
+    ordertypelbl.text =@"Order Type:  Catering";
+    
+    UILabel * Orderidlbl = [[[UILabel alloc] initWithFrame:CGRectMake(170, 112-25, 200,45)] autorelease];
+    Orderidlbl.text =@"Select Quantity";
+    Orderidlbl.textAlignment = 0;
+    Orderidlbl.numberOfLines=2;
+    Orderidlbl.backgroundColor = [UIColor clearColor];
+    Orderidlbl.textColor = [UIColor colorWithRed:242/255.0 green:250/255.0 blue:60/255.0 alpha:1];
+    Orderidlbl.font=[UIFont fontWithName:@"Arial" size:(20)];
+    [loginareabg  addSubview:Orderidlbl];
+    
+    smallQtyBtn =[UIButton buttonWithType:UIButtonTypeCustom];
+    smallQtyBtn.frame=CGRectMake(170,142,25,25);
+    [smallQtyBtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"light-off3" ofType:@"png"]] forState:UIControlStateNormal];
+    [smallQtyBtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"light-on3" ofType:@"png"]] forState:UIControlStateSelected];
+    smallQtyBtn.tag=1;
+    smallQtyBtn.hidden=FALSE;
+    [smallQtyBtn addTarget:self action:@selector(radio_btnAction:) forControlEvents:UIControlEventTouchUpInside];
+    [loginareabg addSubview:smallQtyBtn];
+
+    UILabel *smallOrderlbl = [[[UILabel alloc] initWithFrame:CGRectMake(210, 132, 200,45)] autorelease];
+    smallOrderlbl.text =@"Small";
+    smallOrderlbl.textAlignment = 0;
+    smallOrderlbl.numberOfLines=2;
+    smallOrderlbl.backgroundColor = [UIColor clearColor];
+    smallOrderlbl.textColor = [UIColor colorWithRed:242/255.0 green:250/255.0 blue:60/255.0 alpha:1];
+    smallOrderlbl.font=[UIFont fontWithName:@"Arial" size:(20)];
+    [loginareabg  addSubview:smallOrderlbl];
+    
+    
+    mediumQtyBtn =[UIButton buttonWithType:UIButtonTypeCustom];
+    mediumQtyBtn.frame=CGRectMake(170,142+40,25,25);
+    [mediumQtyBtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"light-off3" ofType:@"png"]] forState:UIControlStateNormal];
+    [mediumQtyBtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"light-on3" ofType:@"png"]] forState:UIControlStateSelected];
+    mediumQtyBtn.tag=2;
+    mediumQtyBtn.hidden=FALSE;
+    [mediumQtyBtn addTarget:self action:@selector(radio_btnAction:) forControlEvents:UIControlEventTouchUpInside];
+    [loginareabg addSubview:mediumQtyBtn];
+    
+    
+    UILabel * mediumOrderlbl = [[[UILabel alloc] initWithFrame:CGRectMake(210, 132+40, 200,45)] autorelease];
+    mediumOrderlbl.text =@"Medium";
+    mediumOrderlbl.textAlignment = 0;
+    mediumOrderlbl.numberOfLines=2;
+    mediumOrderlbl.backgroundColor = [UIColor clearColor];
+    mediumOrderlbl.textColor = [UIColor colorWithRed:242/255.0 green:250/255.0 blue:60/255.0 alpha:1];
+    mediumOrderlbl.font=[UIFont fontWithName:@"Arial" size:(20)];
+    [loginareabg  addSubview:mediumOrderlbl];
+    
+    
+    largeQtyBtn =[UIButton buttonWithType:UIButtonTypeCustom];
+    largeQtyBtn.frame=CGRectMake(170,142+80,25,25);
+    [largeQtyBtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"light-off3" ofType:@"png"]] forState:UIControlStateNormal];
+    [largeQtyBtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"light-on3" ofType:@"png"]] forState:UIControlStateSelected];
+    largeQtyBtn.tag=3;
+    largeQtyBtn.hidden=FALSE;
+    [largeQtyBtn addTarget:self action:@selector(radio_btnAction:) forControlEvents:UIControlEventTouchUpInside];
+    [loginareabg addSubview:largeQtyBtn];
+    
+    
+    UILabel * largeOrderlbl = [[[UILabel alloc] initWithFrame:CGRectMake(210, 132+80, 200,45)] autorelease];
+    largeOrderlbl.text =@"Large";
+    largeOrderlbl.textAlignment = 0;
+    largeOrderlbl.numberOfLines=2;
+    largeOrderlbl.backgroundColor = [UIColor clearColor];
+    largeOrderlbl.textColor = [UIColor colorWithRed:242/255.0 green:250/255.0 blue:60/255.0 alpha:1];
+    largeOrderlbl.font=[UIFont fontWithName:@"Arial" size:(20)];
+    [loginareabg  addSubview:largeOrderlbl];
+    
+    UIButton * canceltokenmode =[UIButton buttonWithType:UIButtonTypeCustom];
+    canceltokenmode.frame=CGRectMake(370,240, 100.5,30);
+    canceltokenmode.hidden=FALSE;
+    [canceltokenmode setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"cancel-button" ofType:@"png"]] forState:UIControlStateNormal];
+    [canceltokenmode addTarget:self action:@selector(closepoup) forControlEvents:UIControlEventTouchUpInside];
+    [loginareabg addSubview:canceltokenmode];
+    
+    UIButton * donetblbtn =[UIButton buttonWithType:UIButtonTypeCustom];
+    donetblbtn.frame=CGRectMake(500,240, 100.5,30);
+    donetblbtn.hidden=FALSE;
+    [donetblbtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"submit-button" ofType:@"png"]] forState:UIControlStateNormal];
+    [donetblbtn addTarget:self action:@selector(updateTable_Waitername) forControlEvents:UIControlEventTouchUpInside];
+    [loginareabg addSubview:donetblbtn];
+}
+
+
+
+    
+   
+-(void)radio_btnAction:(id)sender
+{
+    
+        switch ([sender tag]) {
+            case 1:
+                
+                [largeQtyBtn setSelected:NO];
+                [mediumQtyBtn setSelected:NO];
+                [smallQtyBtn setSelected:YES];
+              
+                
+                break;
+            case 2:
+                
+                [mediumQtyBtn setSelected:YES];
+                [largeQtyBtn setSelected:NO];
+                [smallQtyBtn setSelected:NO];
+               
+                break;
+                
+            case 3:
+                [mediumQtyBtn setSelected:NO];
+                [largeQtyBtn setSelected:YES];
+                [smallQtyBtn setSelected:NO];
+               
+                break;
+            default:
+                break;
+        }
+        
+        
+}
+
 
 -(void)dineinOrderAction{
     dininbtn.hidden=TRUE;
     takewaybtn.hidden=TRUE;
+    cateringbtn.hidden=TRUE;
     Is_Cashier=TRUE;
     ordertypelbl.font=[UIFont fontWithName:@"Arial" size:(30)];
     ordertypelbl.text =@"Order Type:   Take Away";
@@ -1229,60 +1414,336 @@ BOOL IShidden;
 
 
 -(void)takeawayOrderaction{
-    dininbtn.hidden=TRUE;
-    takewaybtn.hidden=TRUE;
-    
-    ordertypelbl.font=[UIFont fontWithName:@"Arial" size:(30)];
-    ordertypelbl.text =@"Order Type:  Dine-In";
-    UILabel * Orderidlbl = [[[UILabel alloc] initWithFrame:CGRectMake(170, 112, 200,45)] autorelease];
-    Orderidlbl.text =@"Table No:";
-    Orderidlbl.textAlignment = 0;
-    Orderidlbl.numberOfLines=2;
-    Orderidlbl.backgroundColor = [UIColor clearColor];
-    Orderidlbl.textColor = [UIColor colorWithRed:242/255.0 green:250/255.0 blue:60/255.0 alpha:1];
-    Orderidlbl.font=[UIFont fontWithName:@"Arial" size:(25)];
-    [loginareabg  addSubview:Orderidlbl];
     
     
-    UIImageView* tablebgimg;
-    tablebgimg = [[[UIImageView alloc] initWithFrame:CGRectMake(305,115,180,43.5)] autorelease];
-    [tablebgimg setImage:[UIImage imageNamed:@"text-field.png"]];
-    tablebgimg.userInteractionEnabled=TRUE;
-    tablebgimg.opaque = YES;
-    tablebgimg.hidden=FALSE;
-    [loginareabg addSubview:tablebgimg];
+//    dininbtn.hidden=TRUE;
+//    takewaybtn.hidden=TRUE;
+//    cateringbtn.hidden=TRUE;
+//    
+//    ordertypelbl.font=[UIFont fontWithName:@"Arial" size:(30)];
+//    ordertypelbl.text =@"Order Type:  Dine-In";
+//    UILabel * Orderidlbl = [[[UILabel alloc] initWithFrame:CGRectMake(170, 112, 200,45)] autorelease];
+//    Orderidlbl.text =@"Table No:";
+//    Orderidlbl.textAlignment = 0;
+//    Orderidlbl.numberOfLines=2;
+//    Orderidlbl.backgroundColor = [UIColor clearColor];
+//    Orderidlbl.textColor = [UIColor colorWithRed:242/255.0 green:250/255.0 blue:60/255.0 alpha:1];
+//    Orderidlbl.font=[UIFont fontWithName:@"Arial" size:(25)];
+//    [loginareabg  addSubview:Orderidlbl];
+//    
+//    
+//    UIImageView* tablebgimg;
+//    tablebgimg = [[[UIImageView alloc] initWithFrame:CGRectMake(305,115,180,43.5)] autorelease];
+//    [tablebgimg setImage:[UIImage imageNamed:@"text-field.png"]];
+//    tablebgimg.userInteractionEnabled=TRUE;
+//    tablebgimg.opaque = YES;
+//    tablebgimg.hidden=FALSE;
+//    [loginareabg addSubview:tablebgimg];
+//    
+//    //Input UserName Text field Area
+//    tblnotext = [[[UITextField  alloc] initWithFrame:CGRectMake(5, 5, 170,30) ]autorelease];
+//    tblnotext.borderStyle = UITextBorderStyleNone;
+//	tblnotext.font = [UIFont fontWithName:@"ArialMT" size:(28.0)];
+//    tblnotext.textColor=[UIColor grayColor];
+//	tblnotext.placeholder=@"00";
+//    tblnotext.backgroundColor=[UIColor clearColor];
+//	tblnotext.delegate = self;
+//    tblnotext.keyboardType= UIKeyboardTypeNumberPad;
+//    tblnotext.returnKeyType = UIReturnKeyGo;
+//    [tablebgimg addSubview:tblnotext];
+//    
+//    
+//    
+//    UIButton * canceltokenmode =[UIButton buttonWithType:UIButtonTypeCustom];
+//    canceltokenmode.frame=CGRectMake(210,220, 100.5,30);
+//    canceltokenmode.hidden=FALSE;
+//    [canceltokenmode setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"cancel-button" ofType:@"png"]] forState:UIControlStateNormal];
+//    [canceltokenmode addTarget:self action:@selector(closepoup) forControlEvents:UIControlEventTouchUpInside];
+//    [loginareabg addSubview:canceltokenmode];
+//    
+//    UIButton * donetblbtn =[UIButton buttonWithType:UIButtonTypeCustom];
+//    donetblbtn.frame=CGRectMake(350,220, 100.5,30);
+//    donetblbtn.hidden=FALSE;
+//    [donetblbtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"submit-button" ofType:@"png"]] forState:UIControlStateNormal];
+//    [donetblbtn addTarget:self action:@selector(updateTable_Waitername) forControlEvents:UIControlEventTouchUpInside];
+//    [loginareabg addSubview:donetblbtn];
+//    NSInteger spacing = INTERFACE_IS_PAD ? 10 : 15;
+//    
+//    GMGridView *gmGridView = [[GMGridView alloc] initWithFrame:CGRectMake(0, 0, 640, 480)];
+//    gmGridView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+//    gmGridView.backgroundColor = [UIColor clearColor];
+//    [self.view addSubview:gmGridView];
+//    
+//    _gmGridView = gmGridView;
+//    
+//    _gmGridView.style = GMGridViewStyleSwap;
+//    _gmGridView.itemSpacing = spacing;
+//    _gmGridView.minEdgeInsets = UIEdgeInsetsMake(spacing, spacing, spacing, spacing);
+//    _gmGridView.centerGrid = YES;
+//    _gmGridView.actionDelegate = self;
+//    _gmGridView.sortingDelegate = self;
+//    _gmGridView.transformDelegate = self;
+//    _gmGridView.dataSource = self;
+//   _gmGridView.mainSuperView = self.view;
     
-    //Input UserName Text field Area
-    tblnotext = [[[UITextField  alloc] initWithFrame:CGRectMake(5, 5, 170,30) ]autorelease];
-    tblnotext.borderStyle = UITextBorderStyleNone;
-	tblnotext.font = [UIFont fontWithName:@"ArialMT" size:(28.0)];
-    tblnotext.textColor=[UIColor grayColor];
-	tblnotext.placeholder=@"00";
-    tblnotext.backgroundColor=[UIColor clearColor];
-	tblnotext.delegate = self;
-    tblnotext.keyboardType= UIKeyboardTypeNumberPad;
-    tblnotext.returnKeyType = UIReturnKeyGo;
-    [tablebgimg addSubview:tblnotext];
-    
-    
-    
-    UIButton * canceltokenmode =[UIButton buttonWithType:UIButtonTypeCustom];
-    canceltokenmode.frame=CGRectMake(210,220, 100.5,30);
-    canceltokenmode.hidden=FALSE;
-    [canceltokenmode setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"cancel-button" ofType:@"png"]] forState:UIControlStateNormal];
-    [canceltokenmode addTarget:self action:@selector(closepoup) forControlEvents:UIControlEventTouchUpInside];
-    [loginareabg addSubview:canceltokenmode];
-    
-    UIButton * donetblbtn =[UIButton buttonWithType:UIButtonTypeCustom];
-    donetblbtn.frame=CGRectMake(350,220, 100.5,30);
-    donetblbtn.hidden=FALSE;
-    [donetblbtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"submit-button" ofType:@"png"]] forState:UIControlStateNormal];
-    [donetblbtn addTarget:self action:@selector(updateTable_Waitername) forControlEvents:UIControlEventTouchUpInside];
-    [loginareabg addSubview:donetblbtn];
+    Demo1ViewController *demo=[[Demo1ViewController alloc] init];
+    [self.navigationController pushViewController:demo animated:YES];
+    [demo release];
     
     
 }
 
+
+//////////////////////////////////////////////////////////////
+#pragma mark GMGridViewDataSource
+//////////////////////////////////////////////////////////////
+
+- (NSInteger)numberOfItemsInGMGridView:(GMGridView *)gridView
+{
+    return [_currentData count];
+}
+
+- (CGSize)GMGridView:(GMGridView *)gridView sizeForItemsInInterfaceOrientation:(UIInterfaceOrientation)orientation
+{
+    if (INTERFACE_IS_PAD)
+    {
+      
+        
+        if (UIInterfaceOrientationIsLandscape(orientation))
+        {
+            return CGSizeMake(285, 205);
+        }
+        else
+        {
+            return CGSizeMake(230, 175);
+        }
+    }
+    else
+    {
+        if (UIInterfaceOrientationIsLandscape(orientation))
+        {
+            return CGSizeMake(170, 135);
+        }
+        else
+        {
+            return CGSizeMake(140, 110);
+        }
+       
+    }
+}
+
+- (GMGridViewCell *)GMGridView:(GMGridView *)gridView cellForItemAtIndex:(NSInteger)index
+{
+    //NSLog(@"Creating view indx %d", index);
+    
+    CGSize size = [self GMGridView:gridView sizeForItemsInInterfaceOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
+    
+    GMGridViewCell *cell = [gridView dequeueReusableCell];
+    
+    if (!cell)
+    {
+        cell = [[GMGridViewCell alloc] init];
+        cell.deleteButtonIcon = [UIImage imageNamed:@"close_x.png"];
+        cell.deleteButtonOffset = CGPointMake(-15, -15);
+        
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
+        view.backgroundColor = [UIColor redColor];
+        view.layer.masksToBounds = NO;
+        view.layer.cornerRadius = 8;
+        
+        cell.contentView = view;
+    }
+    
+    [[cell.contentView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:cell.contentView.bounds];
+    label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    label.text = (NSString *)[_currentData objectAtIndex:index];
+    label.textAlignment = UITextAlignmentCenter;
+    label.backgroundColor = [UIColor clearColor];
+    label.textColor = [UIColor blackColor];
+    label.highlightedTextColor = [UIColor whiteColor];
+    label.font = [UIFont boldSystemFontOfSize:20];
+    [cell.contentView addSubview:label];
+    
+    return cell;
+}
+
+
+- (BOOL)GMGridView:(GMGridView *)gridView canDeleteItemAtIndex:(NSInteger)index
+{
+    return YES; //index % 2 == 0;
+}
+
+//////////////////////////////////////////////////////////////
+#pragma mark GMGridViewActionDelegate
+//////////////////////////////////////////////////////////////
+
+- (void)GMGridView:(GMGridView *)gridView didTapOnItemAtIndex:(NSInteger)position
+{
+    NSLog(@"Did tap at index %d", position);
+}
+
+- (void)GMGridViewDidTapOnEmptySpace:(GMGridView *)gridView
+{
+    NSLog(@"Tap on empty space");
+}
+
+- (void)GMGridView:(GMGridView *)gridView processDeleteActionForItemAtIndex:(NSInteger)index
+{
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Confirm" message:@"Are you sure you want to delete this item?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Delete", nil];
+//    
+//    [alert show];
+//    
+//    _lastDeleteItemIndexAsked = index;
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+//    if (buttonIndex == 1)
+//    {
+//        [_currentData removeObjectAtIndex:_lastDeleteItemIndexAsked];
+//        [_gmGridView removeObjectAtIndex:_lastDeleteItemIndexAsked withAnimation:GMGridViewItemAnimationFade];
+//    }
+}
+
+//////////////////////////////////////////////////////////////
+#pragma mark GMGridViewSortingDelegate
+//////////////////////////////////////////////////////////////
+
+- (void)GMGridView:(GMGridView *)gridView didStartMovingCell:(GMGridViewCell *)cell
+{
+    [UIView animateWithDuration:0.3
+                          delay:0
+                        options:UIViewAnimationOptionAllowUserInteraction
+                     animations:^{
+                         cell.contentView.backgroundColor = [UIColor orangeColor];
+                         cell.contentView.layer.shadowOpacity = 0.7;
+                     }
+                     completion:nil
+     ];
+}
+
+- (void)GMGridView:(GMGridView *)gridView didEndMovingCell:(GMGridViewCell *)cell
+{
+    [UIView animateWithDuration:0.3
+                          delay:0
+                        options:UIViewAnimationOptionAllowUserInteraction
+                     animations:^{
+                         cell.contentView.backgroundColor = [UIColor redColor];
+                         cell.contentView.layer.shadowOpacity = 0;
+                     }
+                     completion:nil
+     ];
+}
+
+- (BOOL)GMGridView:(GMGridView *)gridView shouldAllowShakingBehaviorWhenMovingCell:(GMGridViewCell *)cell atIndex:(NSInteger)index
+{
+    return YES;
+}
+
+- (void)GMGridView:(GMGridView *)gridView moveItemAtIndex:(NSInteger)oldIndex toIndex:(NSInteger)newIndex
+{
+    NSObject *object = [_currentData objectAtIndex:oldIndex];
+    [_currentData removeObject:object];
+    [_currentData insertObject:object atIndex:newIndex];
+}
+
+- (void)GMGridView:(GMGridView *)gridView exchangeItemAtIndex:(NSInteger)index1 withItemAtIndex:(NSInteger)index2
+{
+    [_currentData exchangeObjectAtIndex:index1 withObjectAtIndex:index2];
+}
+
+
+//////////////////////////////////////////////////////////////
+#pragma mark DraggableGridViewTransformingDelegate
+//////////////////////////////////////////////////////////////
+
+- (CGSize)GMGridView:(GMGridView *)gridView sizeInFullSizeForCell:(GMGridViewCell *)cell atIndex:(NSInteger)index inInterfaceOrientation:(UIInterfaceOrientation)orientation
+{
+    if (INTERFACE_IS_PAD)
+    {
+        if (UIInterfaceOrientationIsLandscape(orientation))
+        {
+            return CGSizeMake(700, 530);
+        }
+        else
+        {
+            return CGSizeMake(600, 500);
+        }
+    }
+    else
+    {
+        if (UIInterfaceOrientationIsLandscape(orientation))
+        {
+            return CGSizeMake(320, 210);
+        }
+        else
+        {
+            return CGSizeMake(300, 310);
+        }
+    }
+}
+
+- (UIView *)GMGridView:(GMGridView *)gridView fullSizeViewForCell:(GMGridViewCell *)cell atIndex:(NSInteger)index
+{
+    UIView *fullView = [[UIView alloc] init];
+    fullView.backgroundColor = [UIColor yellowColor];
+    fullView.layer.masksToBounds = NO;
+    fullView.layer.cornerRadius = 8;
+    
+    CGSize size = [self GMGridView:gridView sizeInFullSizeForCell:cell atIndex:index inInterfaceOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
+    fullView.bounds = CGRectMake(0, 0, size.width, size.height);
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:fullView.bounds];
+    label.text = [NSString stringWithFormat:@"Fullscreen View for cell at index %d", index];
+    label.textAlignment = UITextAlignmentCenter;
+    label.backgroundColor = [UIColor clearColor];
+    label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    if (INTERFACE_IS_PAD)
+    {
+        label.font = [UIFont boldSystemFontOfSize:15];
+    }
+    else
+    {
+        label.font = [UIFont boldSystemFontOfSize:20];
+    }
+    
+    [fullView addSubview:label];
+    
+    
+    return fullView;
+}
+
+- (void)GMGridView:(GMGridView *)gridView didStartTransformingCell:(GMGridViewCell *)cell
+{
+    [UIView animateWithDuration:0.5
+                          delay:0
+                        options:UIViewAnimationOptionAllowUserInteraction
+                     animations:^{
+                         cell.contentView.backgroundColor = [UIColor blueColor];
+                         cell.contentView.layer.shadowOpacity = 0.7;
+                     }
+                     completion:nil];
+}
+
+- (void)GMGridView:(GMGridView *)gridView didEndTransformingCell:(GMGridViewCell *)cell
+{
+    [UIView animateWithDuration:0.5
+                          delay:0
+                        options:UIViewAnimationOptionAllowUserInteraction
+                     animations:^{
+                         cell.contentView.backgroundColor = [UIColor redColor];
+                         cell.contentView.layer.shadowOpacity = 0;
+                     }
+                     completion:nil];
+}
+
+- (void)GMGridView:(GMGridView *)gridView didEnterFullSizeForCell:(UIView *)cell
+{
+    
+}
 
 
 
@@ -1337,13 +1798,14 @@ BOOL IShidden;
     }
     else{
         
-        tablenoglob=tblnotext.text;
+       self.tablenoglob=tblnotext.text;
         
         
         
         [ordarstatusarr removeAllObjects];
         [tablenoarr removeAllObjects];
         [waiternamearr removeAllObjects];
+        [timearr removeAllObjects];
         [ordernamearr removeAllObjects];
         [finalArray removeAllObjects];
         [orderidarr removeAllObjects];
@@ -1362,7 +1824,9 @@ BOOL IShidden;
         [ordarstatusarr release];
         ordarstatusarr=nil;
         
-        
+        [timearr release];
+        timearr=nil;
+
         [tablenoarr release];
         tablenoarr=nil;
         
@@ -1549,6 +2013,8 @@ BOOL IShidden;
         
         priceArrays=[priceArray mutableCopy];
         
+        
+        NSLog(@"priceArrays %@",priceArrays);
         if(!pairentnamearr)    pairentnamearr = [[NSMutableArray alloc] init];
         else [pairentnamearr removeAllObjects];
         
@@ -1751,7 +2217,8 @@ BOOL IShidden;
 
 //Update big poup when click table cell
 
--(void)Open_update_poup_description:(id)sender{
+-(void)Open_update_poup_description:(id)sender
+{
     
     NSInteger popupTag = ((UIButton *)sender).tag;
     
@@ -2097,8 +2564,8 @@ BOOL IShidden;
         
         currentwaitername = [NSString stringWithFormat:@"%@",[waiternamearr objectAtIndex:a-100]];
         
-        
-        UIImageView *roworder = [[UIImageView alloc] initWithFrame:CGRectMake(xPositiond,yPositiond, 1005,45.5)];
+       
+        roworder = [[UIImageView alloc] initWithFrame:CGRectMake(xPositiond,yPositiond, 1005,45.5)];
         [roworder setImage:[UIImage imageNamed:@"order-row.png"]];
         roworder.userInteractionEnabled=TRUE;
         roworder.opaque = YES;
@@ -2106,9 +2573,13 @@ BOOL IShidden;
         
 #pragma Allorder scroll view cell btn like table selection
         
-        UIButton * clickrowbtn =[UIButton buttonWithType:UIButtonTypeCustom];
+       clickrowbtn =[UIButton buttonWithType:UIButtonTypeCustom];
         clickrowbtn.frame=CGRectMake(0,0,1024,45.5);
+        
+        
         [clickrowbtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"order-row" ofType:@"png"]] forState:UIControlStateNormal];
+        [clickrowbtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"order-row-selected" ofType:@"png"]] forState:UIControlStateSelected];
+        
         clickrowbtn.tag=[[orderidarr121 objectAtIndex:a-100] integerValue];
         clickrowbtn.tag=a;
         [clickrowbtn addTarget:self action:@selector(serviceclickallordercell:) forControlEvents:UIControlEventTouchUpInside];
@@ -2118,14 +2589,14 @@ BOOL IShidden;
         UILabel * waiternamelbl;
         waiternamelbl = [[[UILabel alloc] initWithFrame:CGRectMake(10,5,200,30)] autorelease];
         waiternamelbl.text = [waiternamearr objectAtIndex:a-100];
-        waiternamelbl.textAlignment = 0;
+        waiternamelbl.textAlignment=UITextAlignmentCenter;
         waiternamelbl.backgroundColor = [UIColor clearColor];
         waiternamelbl.textColor = [UIColor colorWithRed:137/255.0 green:137/255.0 blue:137/255.0 alpha:1];
         waiternamelbl.font=[UIFont fontWithName:@"Arial" size:(20)];
         [roworder  addSubview:waiternamelbl];
         
         UILabel * tablenolbl;
-        tablenolbl = [[[UILabel alloc] initWithFrame:CGRectMake(285,5,150,30)] autorelease];
+        tablenolbl = [[[UILabel alloc] initWithFrame:CGRectMake(265,5,150,30)] autorelease];
         if([[tokenarr objectAtIndex:a-100] isEqualToString:@"1"])
         {tablenolbl.text =[NSString stringWithFormat:@"T-%@",[tablenoarr objectAtIndex:a-100]];}
         else
@@ -2139,7 +2610,7 @@ BOOL IShidden;
         
         
         UILabel * orderstatuslbl;
-        orderstatuslbl = [[[UILabel alloc] initWithFrame:CGRectMake(510,5,130,30)] autorelease];
+        orderstatuslbl = [[[UILabel alloc] initWithFrame:CGRectMake(470,5,130,30)] autorelease];
         orderstatuslbl.text = [ordarstatusarr objectAtIndex:a-100];
         orderstatuslbl.textAlignment = 1;
         orderstatuslbl.backgroundColor = [UIColor clearColor];
@@ -2148,25 +2619,56 @@ BOOL IShidden;
         [roworder  addSubview:orderstatuslbl];
         
         
-        //Btn for print order payment detail
         
+       
+        Timerlbl = [[[UILabel alloc] initWithFrame:CGRectMake(633,5,120,30)] autorelease];
+        
+       
+        NSDateFormatter *dateformatter=[[NSDateFormatter alloc]init];
+        
+        [dateformatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        NSDate *start = [dateformatter dateFromString:[timearr objectAtIndex:a-100]];
+        
+        NSTimeInterval timeInterval = [start timeIntervalSinceNow];
+        
+        
+//        NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:timeInterval];
+//        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//        [formatter setDateFormat:@"mm"];
+//        NSLog(@"%@", [formatter stringFromDate:date]);
+        
+        
+        NSInteger time = round(timeInterval);
+        NSLog(@"timeInterval %d",time/60);
+        int minutes = floor(time/60);
+       
+        
+
+        Timerlbl.text = [[NSString stringWithFormat:@"%d min",minutes] stringByReplacingOccurrencesOfString:@"-" withString:@""];
+        [Timerlbl setTag:a];
+        Timerlbl.textAlignment = 1;
+        Timerlbl.backgroundColor = [UIColor clearColor];
+        Timerlbl.textColor = [UIColor colorWithRed:137/255.0 green:137/255.0 blue:137/255.0 alpha:1];
+        Timerlbl.font=[UIFont fontWithName:@"Arial" size:(20)];
+        [roworder  addSubview:Timerlbl];
+
         if([[ordarstatusarr objectAtIndex:a-100 ] isEqualToString:@"Ready"]){
-            UIButton * printinactivebtn =[UIButton buttonWithType:UIButtonTypeCustom];
-            printinactivebtn.frame=CGRectMake(900,8, 36,29);
+            printinactivebtn =[UIButton buttonWithType:UIButtonTypeCustom];
+            printinactivebtn.frame=CGRectMake(920,8, 36,29);
             [printinactivebtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"print-icon" ofType:@"png"]] forState:UIControlStateNormal];
-            //            printinactivebtn.tag=[[orderidarr121 objectAtIndex:a-100] integerValue];
-            //            printinactivebtn.tag=a;
-            //  [paymentbtn addTarget:self action:@selector(serviceclickallordercell:) forControlEvents:UIControlEventTouchUpInside];
+                        printinactivebtn.tag=[[orderidarr121 objectAtIndex:a-100] integerValue];
+                        printinactivebtn.tag=a;
+            [printinactivebtn addTarget:self action:@selector(printData:) forControlEvents:UIControlEventTouchUpInside];
             [roworder addSubview:printinactivebtn];
             
         }
         else{
-            UIButton * printinactivebtn =[UIButton buttonWithType:UIButtonTypeCustom];
-            printinactivebtn.frame=CGRectMake(900,8, 36,29);
+            printinactivebtn =[UIButton buttonWithType:UIButtonTypeCustom];
+            printinactivebtn.frame=CGRectMake(920,8, 36,29);
             [printinactivebtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"print-icon" ofType:@"png"]] forState:UIControlStateNormal];
-            //            printinactivebtn.tag=[[orderidarr121 objectAtIndex:a-100] integerValue];
-            //            printinactivebtn.tag=a;
-            //            //  [paymentbtn addTarget:self action:@selector(serviceclickallordercell:) forControlEvents:UIControlEventTouchUpInside];
+            //printinactivebtn.tag=[[orderidarr121 objectAtIndex:a-100] integerValue];
+            printinactivebtn.tag=a;
+            [printinactivebtn addTarget:self action:@selector(printData:) forControlEvents:UIControlEventTouchUpInside];
             [roworder addSubview:printinactivebtn];
         }
         
@@ -2175,45 +2677,129 @@ BOOL IShidden;
         
         if([[ordarstatusarr objectAtIndex:a-100 ] isEqualToString:@"Ready"]){
             paymentbtn =[UIButton buttonWithType:UIButtonTypeCustom];
-            paymentbtn.frame=CGRectMake(710,8, 79,29);
+            paymentbtn.frame=CGRectMake(753,8, 79,29);
             [paymentbtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"process" ofType:@"png"]] forState:UIControlStateNormal];
             paymentbtn.tag=[[orderidarr121 objectAtIndex:a-100] integerValue];
             paymentbtn.tag=a;
+            [clickrowbtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"order-row-drkgreen" ofType:@"png"]] forState:UIControlStateNormal];
             [paymentbtn addTarget:self action:@selector(paymentoptionpoup:) forControlEvents:UIControlEventTouchUpInside];
             [roworder addSubview:paymentbtn];
         }
         else  if([[ordarstatusarr objectAtIndex:a-100 ] isEqualToString:@"Completed"]){
             paymentbtn =[UIButton buttonWithType:UIButtonTypeCustom];
-            paymentbtn.frame=CGRectMake(710,8, 79,29);
+            paymentbtn.frame=CGRectMake(753,8, 79,29);
             [paymentbtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"done" ofType:@"png"]] forState:UIControlStateNormal];
             //            paymentbtn.tag=[[orderidarr121 objectAtIndex:a-100] integerValue];
             //            paymentbtn.tag=a;
             //            [paymentbtn addTarget:self action:@selector(paymentoptionpoup:) forControlEvents:UIControlEventTouchUpInside];
             [roworder addSubview:paymentbtn];
+            [clickrowbtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"order-row-red" ofType:@"png"]] forState:UIControlStateNormal];
+            [clickrowbtn setTag:999999];
+            
         }
         
         else{
             UIButton * paymentbtndecable =[UIButton buttonWithType:UIButtonTypeCustom];
-            paymentbtndecable.frame=CGRectMake(710,8, 79,29);
+            paymentbtndecable.frame=CGRectMake(753,8, 79,29);
             [paymentbtndecable setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"pending" ofType:@"png"]] forState:UIControlStateNormal];
+            [clickrowbtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"order-row-lghtgreen" ofType:@"png"]] forState:UIControlStateNormal];
             //  [paymentbtn addTarget:self action:@selector(serviceclickallordercell:) forControlEvents:UIControlEventTouchUpInside];
             [roworder addSubview:paymentbtndecable];
             
-            
+           
             
         }
         
         
         yPositiond = yPositiond + 46;
+      
     }
     
-    
-    
+   
+//    [NSTimer scheduledTimerWithTimeInterval:60
+//                                     target:self
+//                                   selector:@selector(all_order_Action)
+//                                   userInfo:nil repeats:YES];
     
     
 }
 
 
+
+
+-(void)printData:(id)sender
+{
+    
+    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
+   
+    
+    if ([prefs stringForKey:@"PrinterPortName"] !=NULL)
+    {
+        
+//        [DKAirCashFunctions OpenCashDrawerWithPortname:[prefs stringForKey:@"DrawerPortName"]
+//                                          portSettings:@""
+//                                          drawerNumber:1];
+//        rasterPrinting *rasterPrintingVar = [[rasterPrinting alloc] initWithNibName:@"rasterPrinting" bundle:[NSBundle mainBundle]];
+//        [self presentModalViewController:rasterPrintingVar animated:YES];
+//        [rasterPrintingVar setOptionSwitch:NO];
+//        [rasterPrintingVar release];
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+
+
+        if ([[prefs stringForKey:@"PortSettings"] compare:@"mini" options:NSCaseInsensitiveSearch] == NSOrderedSame) //Portable Printer
+        {
+            [MiniPrinterFunctions PrintBitmapWithPortName:[NSString stringWithFormat:@"%@",[prefs stringForKey:@"PrinterPortName"]] portSettings:[NSString stringWithFormat:@"%@",[prefs stringForKey:@"PortSettings"]] imageSource:[prefs objectForKey:@"imageToPrint"] printerWidth:[prefs objectForKey:@"width"] compressionEnable:[prefs boolForKey:@"switchCompression"] pageModeEnable:[prefs boolForKey:@"switchPageMode"]];
+        }
+        else //Star Line Mode, Star Raster Mode
+        {
+            [PrinterFunctions PrintImageWithPortname:[NSString stringWithFormat:@"%@",[prefs stringForKey:@"PrinterPortName"]] portSettings:[NSString stringWithFormat:@"%@",[prefs stringForKey:@"PortSettings"]] imageToPrint:[prefs objectForKey:@"imageToPrint"] maxWidth:[prefs objectForKey:@"width"] compressionEnable:[prefs boolForKey:@"switchCompression"] withDrawerKick:NO];
+        }
+        
+    }
+    else
+    {
+        ViewController *viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] ;
+        [self.navigationController pushViewController:viewController animated:YES];
+        [viewController release];
+       
+        
+    }
+    
+    
+    
+    
+//    NSLog(@"PRINTING.....");
+//    UIPrintInteractionController *pic = [UIPrintInteractionController sharedPrintController];
+//    pic.delegate = self;
+//    
+//    UIPrintInfo *printInfo = [UIPrintInfo printInfo];
+//    printInfo.outputType = UIPrintInfoOutputGeneral;
+//    //printInfo.orientation=UIPrintInfoOrientationPortrait;
+//    printInfo.jobName = @"ROS";
+//    pic.printInfo = printInfo;
+//    
+//    UISimpleTextPrintFormatter *textFormatter = [[UISimpleTextPrintFormatter alloc]
+//                                                 initWithText:@"Restaurant Operating System"];
+//    textFormatter.startPage = 0;
+//    textFormatter.contentInsets = UIEdgeInsetsMake(72.0, 72.0, 72.0, 72.0); // 1 inch margins
+//    textFormatter.maximumContentWidth = 6 * 72.0;
+//    pic.printFormatter = textFormatter;
+//    [textFormatter release];
+//    pic.showsPageRange = YES;
+//    
+//    void (^completionHandler)(UIPrintInteractionController *, BOOL, NSError *) =
+//    ^(UIPrintInteractionController *printController, BOOL completed, NSError *error) {
+//        if (!completed && error) {
+//            NSLog(@"Printing could not complete because of error: %@", error);
+//        }
+//    };
+//     //[pic presentAnimated:YES completionHandler:completionHandler];
+//    NSLog(@"[sender tag] : %f",[roworder frame].origin.y);
+//    [pic presentFromRect:CGRectMake(900,(([sender tag]%100)*38), 100, 100) inView:[[printinactivebtn superview] superview] animated:YES completionHandler:completionHandler];
+    
+}
 
 #pragma Payment Option poup
 
@@ -2342,7 +2928,34 @@ BOOL IShidden;
     NSLog(@"cashpaymentAction click");
     cancelcardbtn.hidden=TRUE;
     // Is_Card=FALSE;
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     
+    
+    
+    if ([prefs stringForKey:@"DrawerPortName"] !=NULL)
+    {
+        
+                [DKAirCashFunctions OpenCashDrawerWithPortname:[prefs stringForKey:@"DrawerPortName"]
+                                                  portSettings:@""
+                                                  drawerNumber:1];
+//        rasterPrinting *rasterPrintingVar = [[rasterPrinting alloc] initWithNibName:@"rasterPrinting" bundle:[NSBundle mainBundle]];
+//        [self presentModalViewController:rasterPrintingVar animated:YES];
+//        [rasterPrintingVar setOptionSwitch:NO];
+//        [rasterPrintingVar release];
+        
+        
+        
+    }
+    else
+    {
+        ViewController *viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] ;
+        [self.navigationController pushViewController:viewController animated:YES];
+        [viewController release];
+        
+        
+    }
+    
+
     UILabel * totalbilllbl;
     totalbilllbl = [[[UILabel alloc] initWithFrame:CGRectMake(10,80,130,30)] autorelease];
     totalbilllbl.text =@"Total Bill:";
@@ -2744,62 +3357,6 @@ BOOL IShidden;
     
 }
 
--(void)additeamtotbllist:(id)sender{
-    [self Close_Additeam_desc_Poup];
-    NSInteger popupTag1 = ((UIButton *)sender).tag;
-    
-    [tableiteamname addObject:[statesNameArray objectAtIndex:popupTag1-1]];
-    
-    
-    
-    // [priceArrays replaceObjectAtIndex:popupTag1-1 withObject:inStr];
-    if(inStr)
-    {
-        [tableiteamnameprice addObject:[NSString stringWithFormat:@"%@",inStr]];
-        
-    }
-    else   [tableiteamnameprice addObject:[priceArrays objectAtIndex:popupTag1-1]];
-    
-    
-    NSLog(@"Dheeraj-- %@",tableiteamnameprice);
-    
-    
-    [tbliteamid addObject:[idarrays objectAtIndex:popupTag1-1]];
-    
-    
-    
-    NSLog(@"idarraysww %@",idarrays );
-    NSLog(@"tbliteamid %@",tbliteamid );
-    
-    [tblquantity addObject:[NSString stringWithFormat:@"%@",quntitynotextfield.text]];
-    
-    
-    NSLog(@"SSSS %@",remarktextfield.text);
-    if([remarktextfield.text length]>0){
-        //remarktextfield.text=@"dheeraj";
-        NSLog(@"oksss");
-        [tblcommenttext addObject:[NSString stringWithFormat:@"%@",remarktextfield.text]];
-        
-    }
-    else{
-        NSLog(@"NULL");
-        [tblcommenttext addObject:[NSString stringWithFormat:@"Instruction"]];
-        
-    }
-    
-    
-    allprice=0.0;
-    for (int k=0; k<[tableiteamnameprice count]; k++) {
-        allprice=allprice + [[tableiteamnameprice  objectAtIndex:k] floatValue];
-    }
-    NSLog(@"dedEW %@  %@ %@ add---%f",tableiteamname,tableiteamnameprice,tblquantity,allprice);
-    itemtotalprice.text =[NSString stringWithFormat:@"$%.2f", allprice];
-    itemtotalprice1.text =[NSString stringWithFormat:@"$%.2f", allprice];
-    
-    [tableview reloadData];
-    NSLog(@"Allarray-- %@",finalArray);
-    
-}
 
 //Big Boup for addition
 -(void)Open_additeam_poup_description:(id)sender{
@@ -3055,6 +3612,63 @@ BOOL IShidden;
     
 }
 
+-(void)additeamtotbllist:(id)sender{
+    [self Close_Additeam_desc_Poup];
+    NSInteger popupTag1 = ((UIButton *)sender).tag;
+    
+    [tableiteamname addObject:[statesNameArray objectAtIndex:popupTag1-1]];
+    
+    
+    NSLog(@"STR----------%@",inStr);
+    // [priceArrays replaceObjectAtIndex:popupTag1-1 withObject:inStr];
+    if(inStr)
+    {
+        [tableiteamnameprice addObject:[NSString stringWithFormat:@"%@",inStr]];
+        inStr=NULL;
+        
+    }
+    else   [tableiteamnameprice addObject:[priceArrays objectAtIndex:popupTag1-1]];
+    
+    
+    NSLog(@"Dheeraj-- %@",tableiteamnameprice);
+    
+    
+    [tbliteamid addObject:[idarrays objectAtIndex:popupTag1-1]];
+    
+    
+    
+    NSLog(@"idarraysww %@",idarrays );
+    NSLog(@"tbliteamid %@",tbliteamid );
+    
+    [tblquantity addObject:[NSString stringWithFormat:@"%@",quntitynotextfield.text]];
+    
+    
+    NSLog(@"SSSS %@",remarktextfield.text);
+    if([remarktextfield.text length]>0){
+        //remarktextfield.text=@"dheeraj";
+        NSLog(@"oksss");
+        [tblcommenttext addObject:[NSString stringWithFormat:@"%@",remarktextfield.text]];
+        
+    }
+    else{
+        NSLog(@"NULL");
+        [tblcommenttext addObject:[NSString stringWithFormat:@"Instruction"]];
+        
+    }
+    
+    
+    allprice=0.0;
+    for (int k=0; k<[tableiteamnameprice count]; k++) {
+        allprice=allprice + [[tableiteamnameprice  objectAtIndex:k] floatValue];
+    }
+    NSLog(@"dedEW %@  %@ %@ add---%f",tableiteamname,tableiteamnameprice,tblquantity,allprice);
+    itemtotalprice.text =[NSString stringWithFormat:@"$%.2f", allprice];
+    itemtotalprice1.text =[NSString stringWithFormat:@"$%.2f", allprice];
+    
+    [tableview reloadData];
+    NSLog(@"Allarray-- %@",finalArray);
+    
+}
 
 
 -(void)additeam_desc_poup_animation{

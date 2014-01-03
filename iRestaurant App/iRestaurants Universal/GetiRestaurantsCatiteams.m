@@ -33,6 +33,8 @@ NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
 	[theRequest setHTTPMethod:@"POST"];
 	[theRequest setHTTPBody: [soapMessage dataUsingEncoding:NSUTF8StringEncoding]];
 	
+    
+    NSLog(@"GetiRestaurantsCatiteams URL---%@",theRequest);
 	[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
 	webData = [[NSMutableData data] retain];
 }
